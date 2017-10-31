@@ -604,7 +604,7 @@ button:hover, button:focus{
 .btn-opacity{
 	border: 1px solid rgba( white, 0.2);
 	border-radius: 3px;
-	@include table-celling(30px);
+	@include table-celling(50px);
 	a{
 		color: white;
 		z-index: 1;
@@ -789,6 +789,20 @@ $header-height: 120px;
 	@include table-celling($header-height);
 
 }
+.logo{
+	width: 12%;
+}
+.slogan-2{
+	width: 38%;
+}
+.nav-menu{
+	text-align: right;
+	width: 50%;
+}
+.nav-search{
+	text-align: right;
+	width: 5%;
+}
 .logo {
 
   float: left;
@@ -842,7 +856,7 @@ $header-height: 120px;
 .dropdown-lang{
 	position: relative;
 	display: inline-block;
-	z-index: 1;
+	z-index: 5;
 	float: right;
 	background-color: white;
 	border: 1px solid $color_gray_3;
@@ -966,53 +980,57 @@ $header-height: 120px;
 		outline: none;
 	}
 
-/* 	&.in{
+	&.in{
 		input{
 			width: 260px;
-			margin-left: -225px;
+			margin-left: -200px;
 			margin-top: 18px;
 			padding: 6px 12px;
 			height: 34px;
 		}
-	} */
+		.btn-search-sub{
+			margin-top: 24px;
+			margin-left: 40px;
+		}
+	}
+	.form-control{
+		&:focus{
+			border-color: $color_1;
+	    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.275), 0 0 8px rgba( $color_2, 0.8 );
+		}
+	}
 	.btn-search-sub{
 		@extend .btn-res;
     position: absolute;
     z-index: 3;
-    margin-left: 12px;
-    margin-top: 26px;
+    margin-left: 40px;
+    margin-top: -10px;
     top: 50%;
+    transition: all 0.35s ease-in;
+ 
 	}
 	.btn-search{
 		@extend .btn-res;
 		border-left: 1px solid black;
-		padding-left: 10px;
+		padding-left: 30px;
 		z-index: 2;
 		position: relative;
-		//transition: all 0.3s ease-in-out;
 			
 	}
 	input{
-		//transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in;
 		position: absolute;
 		top: 50%;
 		width: 0;
-		margin-top: -10px;
     z-index: 1;
     padding: 0;
     height: 18px;
 	}
-	input{
-		width: 260px;
-		margin-left: -225px;
-		margin-top: 18px;
-		padding: 6px 12px;
-		height: 34px;
-	}
+
 }
 .nav-menu:not(.min){
 	//width: 75%;
-	text-align: center;
+	
 	//display: table;
 	position: relative;
   margin: auto auto;
@@ -1233,7 +1251,7 @@ $header-height: 120px;
 }
 .icon-bar{
 	transition: all 0.3s ease-in-out;
-	background-color: $color_4;
+	background-color: white;
   display: block;
   width: 35px;
   height: 4px;
@@ -1280,7 +1298,7 @@ $header-height: 120px;
 	}
 
 	.icon-bar{
-		background-color: $color_4;
+		background-color: white;
 
    	&:nth-child(1){
    		transform: rotate(138deg) translate(4px, -2px);
@@ -1293,8 +1311,8 @@ $header-height: 120px;
 	}
 }
 .modal-content{
-	background: white;
-	color: #333;
+	background: $color_1;
+	color: white;
 	input{
 		margin-bottom: 10px;
 	}
@@ -1321,10 +1339,10 @@ $header-height: 120px;
 	.btn-opacity{
 		transition: all 0.3s ease-in-out;
 		margin: 15px 0;
-		background-color: $color-2;
+		background-color: white;
 		border-radius: 3px;
 		padding: 5px 30px;
-		color: white;
+		color: $color_1;
 		&:hover, &:focus{
 			filter: brightness(130%);
 		}

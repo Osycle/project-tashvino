@@ -71,16 +71,39 @@ function dropbtn(){
 		$(this).removeClass("active");
 	});
 }
+
+
+var statusSearchView = true;
 $(".btn-search").on("click", function(){
-	$(".nav-search-content").fadeToggle();
-	$(this).find("i").toggleClass("fa fa-search");
-	$(this).find("i").toggleClass("fa fa-close");
+	$(this).find("i")
+		.toggleClass("fa fa-search")
+		.toggleClass("fa fa-close");
+
+	if(statusSearchView){
+		statusSearchView = !statusSearchView;
+		$(".nav-search-content")
+			.find(".btn-search-sub")
+			.add("input")
+			.removeClass("hide").addClass("show");
+
+		setTimeout(function(){ 
+			$(".aSearch").addClass("in") 
+		}, 1);
+
+	}else{
+		statusSearchView = !statusSearchView;
+		$(".aSearch").removeClass("in");
+
+		setTimeout(function(){
+			$(".nav-search-content")
+			.find(".btn-search-sub")
+			.add("input")
+			.addClass("hide").removeClass("show")
+		}, 300);
+	}
+
 } )
-/*$(".btn-search").hover( function(){
-	$(this).closest(".nav-search").toggleClass("in");
-}, function(){
-	$(this).closest(".nav-search").toggleClass("in");
-} );*/
+
 dropbtn();
 
 

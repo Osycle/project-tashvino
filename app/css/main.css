@@ -14404,7 +14404,7 @@ button:hover, button:focus {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   display: table-cell;
-  height: 30px;
+  height: 50px;
   padding-left: 15px;
   padding-right: 15px;
   vertical-align: middle; }
@@ -14542,6 +14542,20 @@ button:hover, button:focus {
   vertical-align: middle; }
 
 .logo {
+  width: 12%; }
+
+.slogan-2 {
+  width: 38%; }
+
+.nav-menu {
+  text-align: right;
+  width: 50%; }
+
+.nav-search {
+  text-align: right;
+  width: 5%; }
+
+.logo {
   float: left;
   padding: 25px 0;
   -webkit-transition: all 0.3s ease-in-out;
@@ -14575,7 +14589,7 @@ button:hover, button:focus {
 .dropdown-lang {
   position: relative;
   display: inline-block;
-  z-index: 1;
+  z-index: 5;
   float: right;
   background-color: white;
   border: 1px solid #e6e6e6;
@@ -14678,46 +14692,48 @@ button:hover, button:focus {
 
 .nav-search {
   padding: 0;
-  position: relative;
-  /* 	&.in{
-		input{
-			width: 260px;
-			margin-left: -225px;
-			margin-top: 18px;
-			padding: 6px 12px;
-			height: 34px;
-		}
-	} */ }
+  position: relative; }
   .nav-search:focus {
     outline: none; }
-  .nav-search .btn-search-sub {
-    position: absolute;
-    z-index: 3;
-    margin-left: 12px;
-    margin-top: 26px;
-    top: 50%; }
-  .nav-search .btn-search {
-    border-left: 1px solid black;
-    padding-left: 10px;
-    z-index: 2;
-    position: relative; }
-  .nav-search input {
-    position: absolute;
-    top: 50%;
-    width: 0;
-    margin-top: -10px;
-    z-index: 1;
-    padding: 0;
-    height: 18px; }
-  .nav-search input {
+  .nav-search.in input {
     width: 260px;
-    margin-left: -225px;
+    margin-left: -200px;
     margin-top: 18px;
     padding: 6px 12px;
     height: 34px; }
+  .nav-search.in .btn-search-sub {
+    margin-top: 24px;
+    margin-left: 40px; }
+  .nav-search .form-control:focus {
+    border-color: #1b2b54;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.275), 0 0 8px rgba(234, 244, 222, 0.8);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.275), 0 0 8px rgba(234, 244, 222, 0.8); }
+  .nav-search .btn-search-sub {
+    position: absolute;
+    z-index: 3;
+    margin-left: 40px;
+    margin-top: -10px;
+    top: 50%;
+    -webkit-transition: all 0.35s ease-in;
+    -o-transition: all 0.35s ease-in;
+    transition: all 0.35s ease-in; }
+  .nav-search .btn-search {
+    border-left: 1px solid black;
+    padding-left: 30px;
+    z-index: 2;
+    position: relative; }
+  .nav-search input {
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    position: absolute;
+    top: 50%;
+    width: 0;
+    z-index: 1;
+    padding: 0;
+    height: 18px; }
 
 .nav-menu:not(.min) {
-  text-align: center;
   position: relative;
   margin: auto auto; }
   .nav-menu:not(.min) a {
@@ -14906,7 +14922,7 @@ button:hover, button:focus {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #e31f24;
+  background-color: white;
   display: block;
   width: 35px;
   height: 4px;
@@ -14939,7 +14955,7 @@ button:hover, button:focus {
       -webkit-box-shadow: inset 0 0 8px;
       box-shadow: inset 0 0 8px; }
   .modal-dialog .icon-bar {
-    background-color: #e31f24; }
+    background-color: white; }
     .modal-dialog .icon-bar:nth-child(1) {
       -webkit-transform: rotate(138deg) translate(4px, -2px);
       -ms-transform: rotate(138deg) translate(4px, -2px);
@@ -14950,8 +14966,8 @@ button:hover, button:focus {
       transform: rotate(-138deg) translate(4px, 2px); }
 
 .modal-content {
-  background: white;
-  color: #333; }
+  background: #1b2b54;
+  color: white; }
   .modal-content input {
     margin-bottom: 10px; }
   .modal-content textarea {
@@ -14973,11 +14989,11 @@ button:hover, button:focus {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   margin: 15px 0;
-  background-color: #eaf4de;
+  background-color: white;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: 5px 30px;
-  color: white; }
+  color: #1b2b54; }
   .modal-footer .btn-opacity:hover, .modal-footer .btn-opacity:focus {
     -webkit-filter: brightness(130%);
     filter: brightness(130%); }
@@ -15557,7 +15573,8 @@ main {
     padding-right: 15px;
     vertical-align: middle;
     padding-left: 0;
-    padding-right: 0; }
+    padding-right: 0;
+    display: initial; }
   .img-circle {
     margin: auto; }
   [class*="padd-right"] {
