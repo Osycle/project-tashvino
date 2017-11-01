@@ -6,8 +6,13 @@ $(function(){
 
 
 
-
-
+/*
+	// FANCYBOX
+	if( $(".fancybox").length != 0 )
+	$(".fancybox").fancybox({});*/
+	$('[data-fancybox]').fancybox({
+	
+	});
 	//WOW
 	new WOW({
 		offset: 30

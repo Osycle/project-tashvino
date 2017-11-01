@@ -41,7 +41,6 @@
 	}
 
 
-
 .header-navbar, .menu-toggle{
 	@include table-celling( 50px );
 	padding-left: 0;
@@ -98,7 +97,7 @@
 		.copyright, .social{
 			margin-top: 10px;
 		}
-		.social{
+		.social, .copyright{
 			text-align: center !important;
 		}
 	}
