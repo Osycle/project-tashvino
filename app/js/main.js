@@ -6,9 +6,9 @@ $(function(){
 
 
 
-/*
+
 	// FANCYBOX
-	if( $(".fancybox").length != 0 )
+/*	if( $(".fancybox").length != 0 )
 	$(".fancybox").fancybox({});*/
 	$('[data-fancybox]').fancybox({
 	
