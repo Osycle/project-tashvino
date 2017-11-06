@@ -82,7 +82,7 @@ $color_gray_3: darken(#ebebeb, 2%);
 	width:5px;
 }
  ::-webkit-scrollbar-thumb{
- 	//border-radius: 5px;
+ 	border-radius: 5px;
  	z-index: 500;
 	background-color: lighten($color_footer, 0%);
 }
@@ -101,7 +101,7 @@ $color_gray_3: darken(#ebebeb, 2%);
 }
 ::-o-scrollbar-thumb{
 	z-index: 500;
-	//border-radius: 5px;
+	border-radius: 5px;
 	background-color: lighten($color_footer, 5%);
 }
 ::-o-scrollbar-thumb:hover{
@@ -932,7 +932,7 @@ $header-height: 120px;
 		width: max-content;
 		visibility: hidden;
 		opacity: 0;
-		background-color:white;
+		background-color: $color_2;
 
 		i{
 			transition: all 0.2s ease-in;
@@ -953,21 +953,24 @@ $header-height: 120px;
 			position: relative;
 			text-align: left;
 			overflow: hidden;
+			font-weight: 600;
 			&:last-child{
-				border-bottom:0 ;
+				border-bottom: 0;
+				margin: 0;
 			}
-			font-size: 14px;
+			//font-size: 14px;
 			&:hover, &:focus{
 				& > a{
 					//letter-spacing: 4px;
-					transform: translateX(4px);
-					background-color: white;
+					//transform: translateX(4px);
+					//transform: matrix(-2, 0, 0, 1, 0, 0);
+					//animation: shake 1s ease-in-out infinite;
 					color: $color_1;
 				}
 			}
 		}
 		a{
-			width: 250px;
+			//width: 250px;
 			padding: 15px 20px;
 		}
 	}
@@ -981,8 +984,8 @@ $header-height: 120px;
 		margin-top: 5px;
 		perspective: 500px;
 		transform-style: preserve-3d;
-		//transform: scale(0.75) perspective(500px) rotateX(-75deg);
-		transform: matrix(1, 0, 0, 1, 0, 20);
+		transform: scale(0.75) perspective(500px) rotateX(-75deg);
+		transform: matrix(1, 0, 0, 1, 0, -20);
 		transform-origin: 40% 0;
 		z-index: 1;
 		li{
@@ -1002,7 +1005,7 @@ $header-height: 120px;
 		margin: 0 5px;
 		perspective: 500px;
 		transform-style: preserve-3d;
-		//transform: scale(0.9) perspective(500px) rotateY(65deg);
+		transform: scale(0.9) perspective(500px) rotateY(65deg);
 		transform: matrix(1, 0, 0, 1, 80, 0);
 		transform-origin: 0 0;
 		z-index: 2;
@@ -1193,26 +1196,50 @@ $header-height: 120px;
 	}
 	.menu-list{
 		text-align: center;
-		li{
-			@for $i from 0 through 7 {
-			 
-					&:nth-child( 7n + #{1*$i} ){
-						//border-bottom: 2px solid hsl( 60*$i+50, 51%, 42%);
-						border-bottom: 2px groove white;
-						//background: linear-gradient(to bottom, white, hsl( 223*$i+50, 51%, 22%) );
-						//background: radial-gradient(center, ellipse cover, white 0%, hsl( 223*$i+50, 51%, 22%) 100%);
-						//background:repeating-radial-gradient(circle at center center, #000, #000 0, hsl( 223*$i+50, 51%, 22%) 0, #fce3ee 50px);
-						
-
-					}
-				 	
-				
+		.sub-parent{
+			overflow: initial;
+			a{
+				padding: 10px 0;
 			}
+			//clip-path: polygon(0 0, 100% 0, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+		}
+		.sub-menu-1{
+			li{
+				width: 33%;
+				display: inline-block;
+				margin: 0;
+			}
+			a{
+				font-size: 1.1em;
+				padding: 10px;
+				word-break: break-word;
+			}
+		}
+		@for $i from 0 through 7 {
+		 
+			&>li:nth-child( 7n + #{1*$i} ){
+					//border-bottom: 2px solid hsl( 60*$i+50, 51%, 42%);
+					//border-bottom: 2px groove white;
+					
+					//box-shadow: inset -3px 1px 120px -39px white
+					background-color: rgba(white, 0.1);
+					background: radial-gradient(to bottom, rgba(white, 0.5), rgba( hsl( 223*$i+50, 51%, 22%), 0.5 ) );
+					//background: radial-gradient(center, ellipse cover, white 0%, hsl( 223*$i+50, 51%, 22%) 100%);
+					//background:repeating-radial-gradient(circle at center center, #000, #000 0, hsl( 223*$i+50, 51%, 22%) 0, #fce3ee 50px);
+					
+
+				}
+			 	
+			
+		}
+		li{
 			width: 100%;
 	    margin-bottom: 15px;
+	    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+			//border-radius: 50%;
 	    //transition: all 0.3s ease-in-out;
 	    &:focus, &:hover, &:active{
-		  	transform: scale(1.05); 
+		  	//transform: scale(1.05); 
 		  }
 		}
 		a{
@@ -1222,7 +1249,7 @@ $header-height: 120px;
 			display: block;
 			padding: 15px ;
 			&:focus{
-				border: 2px solid white;
+				//border: 2px solid white;
 			}
 		}
 	}
@@ -1595,13 +1622,13 @@ main{
     	top: 38%;
     	transition: all 0.3s ease-in-out;
 			p{
-				padding: 0 20px;
+				padding: 0 0;
 				color: white;
 				text-align: center;
 			}
 		}
 		&:hover, &:focus{
-			    outline: none;
+			 outline: none;
 			.desc{
 				text-shadow: -1px 0 20px black;
 			}
@@ -1827,6 +1854,9 @@ main{
 	font-size: em(18, 16);
 	&, a{
 		color: white;
+	}
+	a:hover{
+		color: $color_3;
 	}
 	.sector:not(:first-child){
 		border-left: 1px solid rgba(white, 0.20);

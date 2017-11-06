@@ -41,15 +41,25 @@
 	}
 
 
-.header-navbar, .menu-toggle{
-	@include table-celling( 50px );
-	padding-left: 0;
-	padding-right: 0;
-	display: initial;
+	.header-navbar, .menu-toggle{
+		@include table-celling( 50px );
+		padding-left: 0;
+		padding-right: 0;
+		display: initial;
 
-}
-
-
+	}
+	.header-hidden{
+		height: 95px;
+	}
+	.sector{
+		padding-left: 0 !important;
+		padding-right: 0;
+	}
+	.about{
+		.img-content{
+			margin: initial;
+		}
+	}
 
 
 
