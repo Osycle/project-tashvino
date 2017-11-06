@@ -16,92 +16,55 @@
 @for $i from 0 through 24 {
 	.p-h-#{5*$i} { 
 		padding-left: 5*$i+px;
-		padding-right: 5*$i+px;
-	 	
-	}
-}
+		padding-right: 5*$i+px;}}
+
 @for $i from 0 through 30 {
 	.p-v-#{5*$i} { 
 		padding-top: 5*$i+px;
-		padding-bottom: 5*$i+px;
-	 	
-	}
-}
+		padding-bottom: 5*$i+px;}}
+
 @for $i from 0 through 30 {
 	.p-t-#{5*$i} { 
+		padding-top: 5*$i+px;}}
 
-		padding-top: 5*$i+px;
-
-	}
-}
 @for $i from 0 through 30 {
 	.p-b-#{5*$i} { 
-
-		padding-bottom: 5*$i+px;
-	 	
-	}
-}
+		padding-bottom: 5*$i+px;}}
 
 @for $i from 0 through 30 {
 	.p-l-#{5*$i} { 
+		padding-left: 5*$i+px;}}
 
-		padding-left: 5*$i+px;
-
-	}
-}
 @for $i from 0 through 30 {
 	.p-r-#{5*$i} { 
-
-		padding-right: 5*$i+px;
-	 	
-	}
-}
+		padding-right: 5*$i+px;}}
 
 //------------------------MARG
 @for $i from 0 through 30 {
 	.m-h-#{5*$i} { 
-			margin-left: 5*$i+px;
-			margin-right: 5*$i+px;
-	 	
-	}
-}
+		margin-left: 5*$i+px;
+		margin-right: 5*$i+px;}}
+
 @for $i from 0 through 30 {
 	.m-v-#{5*$i} { 
-			margin-top: 5*$i+px;
-			margin-bottom: 5*$i+px;
-	 	
-	}
-}
+		margin-top: 5*$i+px;
+		margin-bottom: 5*$i+px;}}
 
 @for $i from 0 through 30 {
 	.m-t-#{5*$i} { 
+		margin-top: 5*$i+px;}}
 
-		margin-top: 5*$i+px;
-
-	}
-}
 @for $i from 0 through 30 {
 	.m-b-#{5*$i} { 
-
-			margin-bottom: 5*$i+px;
-	 	
-	}
-}
+		margin-bottom: 5*$i+px;}}
 
 @for $i from 0 through 30 {
 	.m-l-#{5*$i} { 
+		margin-left: 5*$i+px;}}
 
-		margin-left: 5*$i+px;
-
-	}
-}
 @for $i from 0 through 30 {
 	.m-r-#{5*$i}) { 
-
-			margin-right: 5*$i+px;
-	 	
-	}
-}
+		margin-right: 5*$i+px;}}
 
 
 
@@ -109,11 +72,9 @@
 //--------------------Parag-MARGIN
 @for $i from 0 through 12 {
 	.parag-m-t-#{5*$i} { 
-
 		p{
 			margin-top: 5*$i+px;
 		}
-	 	
 	}
 }
 @for $i from 0 through 12 {
@@ -121,17 +82,14 @@
 		p{
 			margin-bottom: 5*$i+px;
 		}
-	 	
 	}
 }
 
 @for $i from 0 through 12 {
 	.parag-m-l-#{5*$i} { 
-
 		p{
 			margin-left: 5*$i+px;
 		}
-	 	
 	}
 }
 @for $i from 0 through 12 {
@@ -139,7 +97,25 @@
 		p{
 			margin-right: 5*$i+px;
 		}
-	 	
+	}
+}
+
+
+
+@for $i from 0 through 12 {
+	.parag-m-h-#{5*$i} { 
+		p{
+			margin-left: 5*$i+px;
+			margin-right: 5*$i+px;
+		}
+	}
+}
+@for $i from 0 through 12 {
+	.parag-m-v-#{5*$i} { 
+		p{
+			margin-top: 5*$i+px;
+			margin-bottom: 5*$i+px;
+		}
 	}
 }
 
@@ -147,11 +123,9 @@
 //------------------Parag-PADDING
 @for $i from 0 through 12 {
 	.parag-p-top-#{5*$i} { 
-
 		p{
 			padding-top: 5*$i+px;
 		}
-	 	
 	}
 }
 @for $i from 0 through 12 {
@@ -159,17 +133,14 @@
 		p{
 			padding-bottom: 5*$i+px;
 		}
-	 	
 	}
 }
 
 @for $i from 0 through 12 {
 	.parag-p-left-#{5*$i} { 
-
 		p{
 			padding-left: 5*$i+px;
 		}
-	 	
 	}
 }
 @for $i from 0 through 12 {
@@ -177,7 +148,6 @@
 		p{
 			padding-right: 5*$i+px;
 		}
-	 	
 	}
 }
 
@@ -195,7 +165,7 @@
 
 //--------------------Figure-MARGIN
 @for $i from 0 through 12 {
-	.parag-m-t-#{5*$i} { 
+	.figure-m-t-#{5*$i} { 
 
 		figure{
 			margin-top: 5*$i+px;
@@ -204,7 +174,7 @@
 	}
 }
 @for $i from 0 through 12 {
-	.parag-m-b-#{5*$i} { 
+	.figure-m-b-#{5*$i} { 
 		figure{
 			margin-bottom: 5*$i+px;
 		}
@@ -222,7 +192,7 @@
 	}
 }
 @for $i from 0 through 12 {
-	.parag-m-r-#{5*$i} { 
+	.figure-m-r-#{5*$i} { 
 	figure{
 			margin-right: 5*$i+px;
 		}
@@ -240,13 +210,38 @@
 	}
 }
 @for $i from 0 through 12 {
-	.parag-m-b-#{5*$i} { 
+	.figure-m-b-#{5*$i} { 
 	figure{
 			margin-bottom: 5*$i+px;
 		}
 	 	
 	}
 }
+
+@for $i from 0 through 12 {
+	.figure-m-v-#{5*$i} { 
+
+		figure{
+			margin-top: 5*$i+px;
+			margin-bottom: 5*$i+px;
+		}
+	 	
+	}
+}
+@for $i from 0 through 12 {
+	.figure-m-h-#{5*$i} { 
+	figure{
+			margin-left: 5*$i+px;
+			margin-right: 5*$i+px;
+		}
+	 	
+	}
+}
+
+
+
+
+
 
 .align-center{
 	text-align: center;
@@ -321,4 +316,7 @@
 }
 .text-lowercase{
 	text-transform: lowercase;
+}
+.text-none{
+	text-transform: none;
 }

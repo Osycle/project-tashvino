@@ -79,51 +79,55 @@ $color_gray_3: darken(#ebebeb, 2%);
 //Scrolling
 
 ::-webkit-scrollbar{
-	width:13px;
+	width:5px;
 }
  ::-webkit-scrollbar-thumb{
  	//border-radius: 5px;
  	z-index: 500;
-	background-color: lighten($color_2, 5%);
+	background-color: lighten($color_footer, 0%);
 }
 ::-webkit-scrollbar-thumb:hover{
-	background-color: darken($color_2, 5%);
+	background-color: darken($color_footer, 5%);
 } 
 ::-webkit-scrollbar-thumb:active{
-	background-color: darken($color_2, 10%);
+	background-color: darken($color_footer, 10%);
 }
 ::-webkit-scrollbar-track-piece{
 	background-color: white;
 }
 // OPERA
 ::-o-scrollbar{
-	width:12px;
+	width:5px;
 }
 ::-o-scrollbar-thumb{
 	z-index: 500;
 	//border-radius: 5px;
-	background-color: lighten($color_2, 5%);
+	background-color: lighten($color_footer, 5%);
 }
 ::-o-scrollbar-thumb:hover{
-	background-color: darken($color_2, 5%);
+	background-color: darken($color_footer, 5%);
 } 
 ::-o-scrollbar-thumb:active{
-	background-color: darken($color_2, 10%);
+	background-color: darken($color_footer, 10%);
 }
 ::-o-scrollbar-track-piece{
 	background-color: rgba(white, 0.5);
 }
-
+::selection {
+    background: $color_3;
+    color: #fff;
+    text-shadow: none;
+ }
 html{
 	-ms-scrollbar-track-color: rgba(0, 0, 0, 0);
-	-ms-scrollbar-face-color: $color_2;
-	-ms-scrollbar-shadow-color: $color_2;
-	-ms-scrollbar-base-color: lighten($color_2, 5%);
+	-ms-scrollbar-face-color: $color_footer;
+	-ms-scrollbar-shadow-color: $color_footer;
+	-ms-scrollbar-base-color: lighten($color_footer, 5%);
 
 	-ms-scroll-translation: vertical-to-horizontal;
 	-ms-scroll-snap-type: mandatory;
-	-ms-scrollbar-3dlight-color: $color_2;
-	-ms-scrollbar-darkshadow-color: darken($color_2, 5%);
+	-ms-scrollbar-3dlight-color: $color_footer;
+	-ms-scrollbar-darkshadow-color: darken($color_footer, 5%);
 	-ms-scrollbar-highlight-color: transparent;
 }
 
@@ -538,14 +542,31 @@ button:hover, button:focus{
 @media only screen and ( max-width: 991px ){
 
 	.inlineble-5{
+		text-align: center; 
 		@include inline-ble(96/3+%, 3+%);
 	}
+
 
 }
 
 @media only screen and ( max-width: 787px ){
 
+	.inlineble-2{
+		&.short-gallery{
+			  img{
+			  	width: 100%;
+			  }
+		}
+		@include inline-ble(100/1+%, 0);
+		figure{
+			text-align: center;	
+		}
+	}
 
+	.inlineble-5{
+		text-align: center;
+		@include inline-ble(96/1+%, 3+%);
+	}
 }
 
 
@@ -577,6 +598,7 @@ $header-height: 120px;
 	background-color: $color_1;
 }
 .skin-header-footer{
+	border-top: 5px solid white;
 	background-color: $color_2;
 }
 .header-navbar, .menu-toggle{
@@ -614,7 +636,7 @@ $header-height: 120px;
 		width: 138px;
 	}
 	&:hover, &:focus{
-  	transform: scale(1.05);
+  	//transform: scale(1);
   }
   & > a{
   	//@include table-celling(150px);
@@ -1172,13 +1194,25 @@ $header-height: 120px;
 	.menu-list{
 		text-align: center;
 		li{
-			@extend .btn-red-gradient;
+			@for $i from 0 through 7 {
+			 
+					&:nth-child( 7n + #{1*$i} ){
+						//border-bottom: 2px solid hsl( 60*$i+50, 51%, 42%);
+						border-bottom: 2px groove white;
+						//background: linear-gradient(to bottom, white, hsl( 223*$i+50, 51%, 22%) );
+						//background: radial-gradient(center, ellipse cover, white 0%, hsl( 223*$i+50, 51%, 22%) 100%);
+						//background:repeating-radial-gradient(circle at center center, #000, #000 0, hsl( 223*$i+50, 51%, 22%) 0, #fce3ee 50px);
+						
+
+					}
+				 	
+				
+			}
 			width: 100%;
-	    border-radius: 7px;
 	    margin-bottom: 15px;
 	    //transition: all 0.3s ease-in-out;
 	    &:focus, &:hover, &:active{
-		  	transform: scale(1.1); 
+		  	transform: scale(1.05); 
 		  }
 		}
 		a{
@@ -1232,7 +1266,7 @@ $header-height: 120px;
 
 #banner{
 	@extend .bg-cover;
-	transition: all 0.3s ease-in;
+	transition: all 3s ease-out;
 	color: white;
 	overflow: hidden;
 	background-position: 0 0;
@@ -1241,11 +1275,15 @@ $header-height: 120px;
 	
 }
 .banner-content{
-	@include table-celling( $header-height*2+10 );
+	@include table-celling( 250px );
+	position: relative;
+	.breadcrumb{
+		padding: 0;
+	}
 }
 .banner-shadow{
 
-	background: linear-gradient(to left, rgba( $color_1, 0.5),rgba($color_4, 0.3) );
+	background: linear-gradient(to left, $color_1 ,rgba($color_4, 0.3) );
 	height: 100%;
 	position: absolute;
 	display: block;
@@ -1330,7 +1368,7 @@ h1, h2, h3{
 	margin-bottom: 10px;
 }
 p{
-	font-size: em(14, 16);
+	font-size: em(16, 16);
 	font-weight: 400;
 }
 
@@ -1537,34 +1575,172 @@ main{
 
 .short-production{
 	//@include table-celling(335px);
+	*, &{
+		::selection {
+	    background: transparent;
+	    //color: #fff;
+	    text-shadow: none;
+  	}
+	}
+	figure{
+		position: relative;
+		transition: all 0.3s ease;
+		img{
+			//transform: rotate(45deg);
+		}
+		.desc{
+			position: absolute;
+			font-size: em(24, 16);
+			width: 100%;
+    	top: 38%;
+    	transition: all 0.3s ease-in-out;
+			p{
+				padding: 0 20px;
+				color: white;
+				text-align: center;
+			}
+		}
+		&:hover, &:focus{
+			    outline: none;
+			.desc{
+				text-shadow: -1px 0 20px black;
+			}
+			filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.5)) brightness(110%);
+		}
+		&:active{
+			transition: all 0.3s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+			transform: scale(0.9);
+		}
+		.vinomaterial{
+			p{
+				margin: 7px;
+			}
+			font-size: em( 30, 16);
+		}
+		.konyachniy{
+			margin-top: -15px;
+			font-size: em( 28, 16);
+		}
+		.vodka{
+			p{
+				margin: 0px;
+			}
+			font-size: em( 40, 16);
+		}
+		.konyak{
+			p{
+				margin: 0px;
+			}
+			font-size: em( 40, 16);
+		}
+		.vino{
+			p{
+				margin: 0px;
+			}
+			font-size: em( 40, 16);
+		}
+		@media only screen and (max-width: 1199px){
+			.vinomaterial, .konyachniy{
+				font-size: em( 19, 16);
+			}
+			.vino, .konyak, .vodka{
+				font-size: em( 25, 16);
+			}
+		}
+		@media only screen and (max-width: 991px){
+			.konyachniy{
+				margin-top: 0px;
+			}
+		}
+		@media only screen and (max-width: 767px){
+			.desc{
+				font-size: 25px;
+				top: 45%;
+				p{padding: 0;margin:0;}
+			}
+		}
+		@media only screen and (max-width: 330px){
+			.desc{
+				//font-size: 20px;
+			}
+		}
+
+	}
 }
 .short-gallery{
 	@include table-celling(425px);
 
-
+	figure{
+		overflow: hidden;
+		transition: all 0.3s ease-in-out;
+		img{
+			transition: all 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+		}
+		&:hover{
+			box-shadow: 0 0 50px -10px black;
+			border-radius: 4px;
+			img{
+				transform: scale(1.1);
+			}
+		}
+	}
 }
+
+
+
+.short-oppo{
+	//@include table-celling(180px);
+	padding: 40px 0;
+	figure{
+		transition: all 0.3s ease-in-out;
+		display: inline-block;
+		margin: 0 100px;
+		&:hover{
+			filter: brightness(110%);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .yt-video{
 	@include table-celling(425px);
 	position: relative;
 	.video{
-		width: 400px;
+		width: 330px;
     height: 230px;
     position: relative;
     margin: auto;
 	}
 	iframe{
 		width: 100%;
-		    height: inherit;
+		height: inherit;
   	
 	}
 	@media only screen and (max-width: 1199px){
 		.video{
-			width: 300px;
+			//width: 300px;
 		}
 	}
 	@media only screen and (max-width: 991px){
 		display: block;
+		width: 100%;
+    height: 100%;
+    margin: 45px 0;
+	}
+	@media only screen and (max-width: 767px){
+		.video{
+			width: initial;
+		}
 	}
 }
 
@@ -1573,21 +1749,26 @@ main{
 
 
 
+//------------ ABOUT
 
+.about{
 
-
-
-
-
-
-
-.yt-video{
-
+	p{
+		word-break: break-all;
+	}
 }
 
 
 
 
+
+
+.fancybox{
+	  
+	  &:focus{
+	  	outline: none;
+	  }
+}
 
 
 
@@ -1647,10 +1828,11 @@ main{
 	&, a{
 		color: white;
 	}
-	section:not(:first-child){
+	.sector:not(:first-child){
 		border-left: 1px solid rgba(white, 0.20);
     padding-left: 45px;
 	}
+
 }
 
 
@@ -1703,6 +1885,13 @@ main{
 		font-size: 20px;
 		margin-left: 10px;
 		display: inline-block;
+	}
+	img{
+		transition:all 0.3s ease-in-out;
+		width: 30px;
+		&:hover{
+			filter: brightness(150%);
+		}
 	}
 }
 

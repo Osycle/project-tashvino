@@ -8,11 +8,8 @@ $(function(){
 
 
 	// FANCYBOX
-/*	if( $(".fancybox").length != 0 )
-	$(".fancybox").fancybox({});*/
-	$('[data-fancybox]').fancybox({
-	
-	});
+	if( $('[data-fancybox]').length != 0 )
+		$('[data-fancybox]').fancybox({});
 	//WOW
 	new WOW({
 		offset: 30
@@ -47,9 +44,8 @@ $(function(){
 	setTimeout(function(){AOS.refresh()}, 300);
 
 
-var header_status = false;
-
-
+	var header_status = false;
+	var statusSearchView = true;
 
 
 	//menu init
@@ -78,7 +74,7 @@ function dropbtn(){
 }
 
 
-var statusSearchView = true;
+
 $(".btn-search").on("click", function(){
 	$(this).find("i")
 		.toggleClass("fa fa-search")
@@ -143,29 +139,7 @@ $( window ).on("scroll", function(e){
 
 
 
-//COMMON FUNTIONS
 
-function sendForm(th){
-
-	this.onsubmit = function(e){ e.preventDefault();}
-	var require = $(th).serialize();
-	send(require+"&to="+to);
-
-	$(th).find("input").val("");
-}
-
-function ajPost(u, d, s, c){
-	$.ajax({
-		type: 		"POST",
-		url: 			u,
-		data: 		d,
-		success: 	s,
-		statusCode: {
-			404: function(){alert("Страница не найдена");}
-		},
-		complete: c
-	});
-}
  $.fn.fadeToggleBool = function( dura = 290 ){
  	var self = $( $(this) ),
  		 bool = self.css("display") == "none";
@@ -180,39 +154,27 @@ function ajPost(u, d, s, c){
 	return bool;
  }
 
-function modalShadow( el ){
 
-	if( $(modal_shadow).length == 0 && el.jquery) 
-		return;
-
-	if( modal_shadow.fadeToggleBool() ){
-		modal_shadow.on("click", function(){
-			if(el.length != 0)
-				el.trigger("click");
-			});
-	}else
-		modal_shadow.off("click");
-}
-
-function scrolledDiv(el) {
-	try{
-	  var docViewTop = $(window).scrollTop(),
-		docViewBottom = docViewTop + $(window).height(),
-		elTop = $(el).offset().top,
-		elBottom = elTop + $(el).height()/1.8;
-	}catch(err){console.error();}
-
-  	return ((elBottom <= docViewBottom) && (elTop >= docViewTop));
-}
-
+setInterval( function(){
+	bannerImgToggle();
+}, 6000 );
 
 	});//$
 }) (jQuery);
 
 
 
+var bannerBg = 1;
+function bannerImgToggle(){
+	var banner = $( $("#banner") ) ;
 
+	window.bannerSlideBg_1 = banner.attr('style');
+	window.bannerSlideBg_2 = banner.attr('data-toggle-img');
 
+	banner.attr("data-toggle-img", bannerSlideBg_1);
+	banner.attr("style", bannerSlideBg_2);
+
+}
 
 
 function Menu( menu, options ){
@@ -340,9 +302,56 @@ window.$.fn.initMenu = function(option){
 
 
 
+//COMMON FUNTIONS
 
+function sendForm(th){
+
+	this.onsubmit = function(e){ e.preventDefault();}
+	var require = $(th).serialize();
+	send(require+"&to="+to);
+
+	$(th).find("input").val("");
+}
+
+function ajPost(u, d, s, c){
+	$.ajax({
+		type: 		"POST",
+		url: 			u,
+		data: 		d,
+		success: 	s,
+		statusCode: {
+			404: function(){alert("Страница не найдена");}
+		},
+		complete: c
+	});
+}
 
 function checkView( width ){
 	return ($( document ).width() > width);
 }
 
+
+function modalShadow( el ){
+
+	if( $(modal_shadow).length == 0 && el.jquery) 
+		return;
+
+	if( modal_shadow.fadeToggleBool() ){
+		modal_shadow.on("click", function(){
+			if(el.length != 0)
+				el.trigger("click");
+			});
+	}else
+		modal_shadow.off("click");
+}
+
+function scrolledDiv(el) {
+	try{
+	  var docViewTop = $(window).scrollTop(),
+		docViewBottom = docViewTop + $(window).height(),
+		elTop = $(el).offset().top,
+		elBottom = elTop + $(el).height()/1.8;
+	}catch(err){console.error();}
+
+  	return ((elBottom <= docViewBottom) && (elTop >= docViewTop));
+}
