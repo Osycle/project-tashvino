@@ -1713,7 +1713,6 @@
 }
 
 
-
  */
 
 @keyframes a-scale{
@@ -1728,6 +1727,19 @@
 }
 .a-scale.active {
   animation: a-scale 0.5s ease-in-out;
+}
+@keyframes leftDes{
+  from {
+    opacity: 0;
+    //margin-left: -100%;
+  }
+  to {
+    opacity: 1;
+    //margin-left: 0;
+  }
+}
+.leftDes {
+  animation: leftDes 0.3s ease-in-out;
 }
 
 

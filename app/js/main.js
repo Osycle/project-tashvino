@@ -9,7 +9,13 @@ $(function(){
 
 	// FANCYBOX
 	if( $('[data-fancybox]').length != 0 )
-		$('[data-fancybox]').fancybox({});
+		$('[data-fancybox]').fancybox({
+			afterShow : function( instance, current ) {
+				//console.info( instance );
+			},
+			animationEffect : "fade",
+			transitionEffect: "zoom-in-out"
+		});
 	//WOW
 	new WOW({
 		offset: 30
@@ -17,16 +23,12 @@ $(function(){
 	// FILTER
 	$(".rewards-select").on("change", function(){ 
 		$( this.selectedOptions ).click();
-		//console.log(this.selectedOptions)
 	})
 
-  //if( $(".rewards-medals").length != 0)
-  	var diplomasMedals = mixitup( $(".rewards-medals"), {
-  		  controls: { 
-        	toggleDefault: 'none' 
-    		} 
-  	} );
-  //if( $(".rewards-diplomas").length != 0)
+  if( $(".rewards-medals").length != 0)
+  	var diplomasMedals = mixitup( $(".rewards-medals"), {} );
+  	//diplomasMedals.getConfig();
+  if( $(".rewards-diplomas").length != 0)
   	var diplomasFilter = mixitup( $(".rewards-diplomas") );
   
 

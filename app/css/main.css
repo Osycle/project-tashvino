@@ -5336,7 +5336,6 @@ template {
 }
 
 
-
  */
 @-webkit-keyframes a-scale {
   from {
@@ -5360,6 +5359,22 @@ template {
 .a-scale.active {
   -webkit-animation: a-scale 0.5s ease-in-out;
   animation: a-scale 0.5s ease-in-out; }
+
+@-webkit-keyframes leftDes {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes leftDes {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.leftDes {
+  -webkit-animation: leftDes 0.3s ease-in-out;
+  animation: leftDes 0.3s ease-in-out; }
 
 @-webkit-keyframes a-minMenu-1 {
   from {
@@ -16731,9 +16746,9 @@ button:hover, button:focus {
     .inlineble-5 figure {
       width: 32%;
       margin-right: 3%; }
-  .inlineble-6 figure {
-    width: 24%;
-    margin-right: 10%; } }
+  .rewards .inlineble-4 figure {
+    width: 28.33333%;
+    margin-right: 3%; } }
 
 @media only screen and (max-width: 787px) {
   .inlineble-2.short-gallery img {
@@ -16743,6 +16758,9 @@ button:hover, button:focus {
     margin-right: 0; }
   .inlineble-2 figure {
     text-align: center; }
+  .rewards .inlineble-4 figure {
+    width: 60%;
+    margin-right: 3%; }
   .inlineble-5 {
     text-align: center; }
     .inlineble-5 figure {
@@ -17223,7 +17241,7 @@ button:hover, button:focus {
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(27, 43, 84, 0.6); }
 
 .modal-body {
-  margin-top: 50px; }
+  margin-top: 30px; }
   .modal-body h1, .modal-body h2 {
     margin: 0; }
 
@@ -17326,7 +17344,7 @@ button:hover, button:focus {
       top: 50%; } }
 
 .feedback-modal .modal-body {
-  padding: 0 50px; }
+  padding: 0 30px; }
 
 .nav-menu.min {
   display: initial; }
@@ -17651,62 +17669,55 @@ main {
       -webkit-filter: brightness(110%);
       filter: brightness(110%); }
 
-.rewards-medals figure {
-  -webkit-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in; }
-  .rewards-medals figure:hover {
-    -webkit-filter: contrast(140%);
-    filter: contrast(140%); }
-    .rewards-medals figure:hover h4 {
-      -webkit-transform: translateY(-5px);
-      -ms-transform: translateY(-5px);
-      transform: translateY(-5px); }
-
-.rewards-medals h4 {
-  padding-top: 10px;
+.rewards-modal {
+  text-align: center;
   -webkit-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
-  text-align: center;
-  text-transform: initial;
-  font-weight: 500; }
+  -webkit-animation: leftDes 1s ease-in-out;
+  animation: leftDes 1s ease-in-out; }
+  .rewards-modal a {
+    color: white; }
+
+.rewards-medals, .rewards-diplomas {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1); }
+  .rewards-medals .img-content, .rewards-diplomas .img-content {
+    display: grid; }
+  .rewards-medals figure:hover, .rewards-diplomas figure:hover {
+    -webkit-filter: contrast(140%);
+    filter: contrast(140%); }
+    .rewards-medals figure:hover *, .rewards-medals figure:hover, .rewards-diplomas figure:hover *, .rewards-diplomas figure:hover {
+      cursor: -webkit-zoom-in;
+      cursor: zoom-in; }
+    .rewards-medals figure:hover h4, .rewards-diplomas figure:hover h4 {
+      cursor: pointer;
+      -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      transform: translateY(-5px); }
+  .rewards-medals h4, .rewards-diplomas h4 {
+    padding-top: 10px;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    text-align: center;
+    text-transform: initial;
+    font-weight: 500; }
 
 .rewards {
   overflow: hidden; }
 
-@media only screen and (max-width: 991px) {
-  .rewards-nav {
-    font-size: 2em; }
-    .rewards-nav h1, .rewards-nav h2, .rewards-nav h3, .rewards-nav h4, .rewards-nav h5 {
-      text-align: center; } }
-
 .rewards-nav-toggle {
   padding: 15px;
   position: fixed;
-  top: 101px;
+  top: 100px;
   font-size: 30px;
   color: white;
   z-index: 50;
   left: 0;
   background-color: #1b2b54; }
-
-.rewards-diplomas figure:hover {
-  -webkit-filter: contrast(140%);
-  filter: contrast(140%); }
-  .rewards-diplomas figure:hover h4 {
-    -webkit-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    transform: translateY(-5px); }
-
-.rewards-diplomas h4 {
-  padding-top: 10px;
-  -webkit-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-  text-align: center;
-  text-transform: initial;
-  font-weight: 500; }
+  @media only screen and (max-width: 767px) {
+    .rewards-nav-toggle {
+      top: 140px; } }
 
 .rewards-catalog {
   display: table-cell;
@@ -17721,19 +17732,14 @@ main {
   display: inline-block;
   margin: 0 10px; }
 
-.rewards-medals, .rewards-diplomas {
-  -webkit-box-shadow: black 0 -8px 10px -10px inset;
-  box-shadow: black 0 -8px 10px -10px inset; }
-
 .rewards-nav {
   padding: 15px;
   padding-bottom: 30px;
   text-align: center;
   position: relative;
   height: 100%;
+  z-index: 1;
   font-weight: 600; }
-  .rewards-nav h3 {
-    text-align: left; }
   .rewards-nav li {
     margin-top: 10px; }
   .rewards-nav a {
@@ -17750,9 +17756,31 @@ main {
   background-color: #eaf4de;
   height: 100%; }
 
+.modal-body .rewards-nav-content {
+  font-size: 2em;
+  height: initial; }
+  .modal-body .rewards-nav-content h3 {
+    text-align: left; }
+  .modal-body .rewards-nav-content li {
+    margin-top: 10px; }
+    .modal-body .rewards-nav-content li a {
+      display: block;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px 30px; }
+
 .rewards-nav-content {
-  position: relative;
-  height: 480px; }
+  position: relative; }
+  .rewards-nav-content a {
+    -webkit-transition: -webkit-transform 0.3s ease-in;
+    transition: -webkit-transform 0.3s ease-in;
+    -o-transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in; }
+    .rewards-nav-content a:hover {
+      font-weight: bold;
+      -webkit-transform: translateX(5px);
+      -ms-transform: translateX(5px);
+      transform: translateX(5px); }
 
 .yt-video {
   display: table-cell;
@@ -17778,6 +17806,10 @@ main {
   @media only screen and (max-width: 767px) {
     .yt-video .video {
       width: initial; } }
+
+@media only screen and (max-width: 991px) {
+  .rewards-nav {
+    font-size: 2em; } }
 
 .about p {
   word-break: break-all; }
@@ -17885,6 +17917,9 @@ main {
 /*
 										 --- OTHER ---
 */
+.fancybox-button:hover:not([disabled]) {
+  background-color: #1b2b54; }
+
 /*
 		_media.scss	
 */
