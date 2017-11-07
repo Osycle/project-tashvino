@@ -515,7 +515,7 @@ button:hover, button:focus{
 }
 
 .inlineble-3{
-	@include inline-ble(96/3+%, 10/20+%);
+	@include inline-ble(70/3+%, 3+%);
 }
 
 .inlineble-4{
@@ -546,6 +546,9 @@ button:hover, button:focus{
 		@include inline-ble(96/3+%, 3+%);
 	}
 
+	.inlineble-6{
+		@include inline-ble(96/4+%, 10%);
+	}
 
 }
 
@@ -567,6 +570,12 @@ button:hover, button:focus{
 		text-align: center;
 		@include inline-ble(96/1+%, 3+%);
 	}
+
+	.inlineble-6{
+		@include inline-ble(80/1+%, 0%);
+	}
+
+
 }
 
 
@@ -1198,16 +1207,20 @@ $header-height: 120px;
 		text-align: center;
 		.sub-parent{
 			overflow: initial;
+			padding: 10px 0;
 			a{
 				padding: 10px 0;
 			}
+
 			//clip-path: polygon(0 0, 100% 0, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+			//clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 		}
 		.sub-menu-1{
 			li{
 				width: 33%;
 				display: inline-block;
-				margin: 0;
+				margin: 10px;
+				background-color: rgba(white, 0.2);
 			}
 			a{
 				font-size: 1.1em;
@@ -1223,7 +1236,7 @@ $header-height: 120px;
 					
 					//box-shadow: inset -3px 1px 120px -39px white
 					background-color: rgba(white, 0.1);
-					background: radial-gradient(to bottom, rgba(white, 0.5), rgba( hsl( 223*$i+50, 51%, 22%), 0.5 ) );
+					//background: radial-gradient(to bottom, rgba(white, 0.5), rgba( hsl( 223*$i+50, 51%, 22%), 0.5 ) );
 					//background: radial-gradient(center, ellipse cover, white 0%, hsl( 223*$i+50, 51%, 22%) 100%);
 					//background:repeating-radial-gradient(circle at center center, #000, #000 0, hsl( 223*$i+50, 51%, 22%) 0, #fce3ee 50px);
 					
@@ -1235,7 +1248,7 @@ $header-height: 120px;
 		li{
 			width: 100%;
 	    margin-bottom: 15px;
-	    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+	    //clip-path: polygon(25% 0%, 75% 0%, 80% 50%, 75% 100%, 25% 100%, 20% 50%);
 			//border-radius: 50%;
 	    //transition: all 0.3s ease-in-out;
 	    &:focus, &:hover, &:active{
@@ -1402,6 +1415,7 @@ p{
 main{
 	overflow: hidden;
 	position: relative;
+	background-color: white;
 /* 	&.container-fluid{
 		padding: 0;
 	} */
@@ -1411,8 +1425,9 @@ main{
 	}
 	a{
 		&:hover, &:focus{
-			color: $color_4;
-			text-decoration: underline;
+  		outline: 0;
+			color: initial;
+			//text-decoration: underline;
 		}
 	}
 }
@@ -1730,15 +1745,124 @@ main{
 
 
 
+.rewards-medals{
+	figure{
+		//display: inline-block;
+		transition: all 0.3s ease-in;
+		
+		&:hover{
+			h4{
+				transform: translateY(-5px);
+			}
+			filter: contrast(140%);
+		}
+	}
+	h4{
+		padding-top: 10px;
+		//border-top: 2px solid $color_1;
+		transition: all 0.3s ease-in;
+		text-align: center;
+		text-transform: initial;
+    font-weight: 500;
+	}
+}
 
+.rewards{
+	overflow: hidden;
+}
+@media only screen and (max-width: 991px){
+	.rewards-nav{
+		font-size: 2em;
+		h1, h2, h3, h4, h5{
+			text-align: center;
+		}
+	}
+}
+.rewards-nav-toggle{
+	@extend .btn-res;
+	padding: 15px;
+	position: fixed;
+	top: 101px;
+	font-size: 30px;
+	color: white;
+	z-index: 50;
+	left: 0;
+	background-color: #1b2b54;
+ }
+.rewards-diplomas{
+	figure{
+		//display: inline-block;
+		//transition: all 0.3s ease-in;
+		
+		&:hover{
+			h4{
+				transform: translateY(-5px);
+			}
+			filter: contrast(140%);
+		}
+	}
+	h4{
+		padding-top: 10px;
+		//border-top: 2px solid $color_1;
+		transition: all 0.3s ease-in;
+		text-align: center;
+		text-transform: initial;
+    font-weight: 500;
+	}
+}
 
+.rewards-catalog{
+	@include table-celling(100px);
+	//background-color: red;
+	.cat-select{
+		margin: auto;
+		//width: px;
+	}
+}
 
+.medals-filter, .diplomas-filter{
+	display: inline-block;
+	margin: 0 10px;
+	
+	//float: left;
+}
+.rewards-medals, .rewards-diplomas{
+	box-shadow: black 0 -8px 10px -10px inset;
+}
+.rewards-nav{
+	padding: 15px;
+	padding-bottom: 30px;
+	text-align: center;
+	position: relative;
+	height: 100%;
+	
+	font-weight: 600;
+	//margin-left: -15px;
+	h3{
+		text-align: left;
+	}
+	li{
+		margin-top: 10px;
+	}
+	a{
+		transition: all 0.3s ease-in;
+		&:hover{
+			transform: translateX(5px)
+		}
+	}
+	.mixitup-control-active{
 
-
-
-
-
-
+	}
+}
+.rewards-skin{
+	position: absolute;
+	background-color: $color_2;
+	height: 100%;
+}
+.rewards-nav-content{
+	position: relative;
+	height: 480px;
+}
 .yt-video{
 	@include table-celling(425px);
 	position: relative;
@@ -1783,10 +1907,19 @@ main{
 	p{
 		word-break: break-all;
 	}
+
+}
+.employees{
+
 }
 
-
-
+@media only screen and (max-width: 991px){
+	.about, .employees{
+		.p-r-60{
+			padding: 0 !important;
+		}
+	}
+}
 
 
 

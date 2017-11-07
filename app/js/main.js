@@ -14,6 +14,21 @@ $(function(){
 	new WOW({
 		offset: 30
 	}).init();
+	// FILTER
+	$(".rewards-select").on("change", function(){ 
+		$( this.selectedOptions ).click();
+		//console.log(this.selectedOptions)
+	})
+
+  //if( $(".rewards-medals").length != 0)
+  	var diplomasMedals = mixitup( $(".rewards-medals"), {
+  		  controls: { 
+        	toggleDefault: 'none' 
+    		} 
+  	} );
+  //if( $(".rewards-diplomas").length != 0)
+  	var diplomasFilter = mixitup( $(".rewards-diplomas") );
+  
 
 	$(".p-animated p").map(function(i, el){
 		$(el).attr({
@@ -115,20 +130,16 @@ $( window ).on("resize", function(e){
 	// body
 
 });
+
 //SCROLL
 $( window ).on("scroll", function(e){
 	
 	if($(window).scrollTop() > 300 && header_status == false){
 		
-
-		//$(".header-scroll").addClass("in");
-		
 		header_status = true; 
 
 	}else if($(window).scrollTop() < 300 && header_status == true){
 
-		//$(".header-scroll").removeClass("in");
-		
 		header_status = false;
 
 	}
