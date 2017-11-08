@@ -20,11 +20,59 @@ $(function(){
 	new WOW({
 		offset: 30
 	}).init();
+
 	// FILTER
 	$(".rewards-select").on("change", function(){ 
 		$( this.selectedOptions ).click();
 	})
 
+	// FLICKITY
+var arrowStyle = { 
+	  x0: 10,
+	  x1: 60, y1: 50,
+	  x2: 60, y2: 45,
+	  x3: 15
+	}
+var $carousel = $('.gallery-content.carousel').flickity({
+		autoPlay: 2000,
+		arrowShape: arrowStyle,
+		//prevNextButtons: false,
+		//rightToLeft: true,
+		draggable: !(checkView(992)) ,
+		friction: 0.5,
+		contain: true,
+		cellAlign: 'center',
+
+  imagesLoaded: true,
+  percentPosition: false
+});
+var $imgs = $carousel.find('.gallery-item.carousel-cell img');
+// get transform property
+var docStyle = document.documentElement.style;
+var transformProp = typeof docStyle.transform == 'string' ?
+  'transform' : 'WebkitTransform';
+// get  instance
+var flkty = $carousel.data('flickity');
+
+$carousel.on( 'scroll.flickity', function() {
+  flkty.slides.forEach( function( slide, i ) {
+    var img = $imgs[i];
+    var x = ( slide.target + flkty.x ) * -1/3;
+    img.style[ transformProp ] = 'translateX(' + x  + 'px)';
+  });
+});
+
+/*	// 1st carousel, main
+	$('.carousel-main').flickity();
+	// 2nd carousel, navigation
+	$('.carousel-nav').flickity({
+	  asNavFor: '.carousel-main',
+	  contain: true,
+	  pageDots: false
+	});
+	*/
+
+	
   if( $(".rewards-medals").length != 0)
   	var diplomasMedals = mixitup( $(".rewards-medals"), {} );
   	//diplomasMedals.getConfig();
