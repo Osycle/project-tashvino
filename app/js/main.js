@@ -8,10 +8,9 @@ $(function(){
 
 
 	// FANCYBOX
-	if( $('[data-fancybox]').length != 0 )
-		$('[data-fancybox]').fancybox({
+	if( $("[data-fancybox='product']").length != 0 )
+		$("[data-fancybox='product']").fancybox({
 			afterShow : function( instance, current ) {
-				//console.info( instance );
 			},
 			animationEffect : "fade",
 			transitionEffect: "zoom-in-out"
@@ -62,15 +61,24 @@ $carousel.on( 'scroll.flickity', function() {
   });
 });
 
-/*	// 1st carousel, main
-	$('.carousel-main').flickity();
-	// 2nd carousel, navigation
-	$('.carousel-nav').flickity({
-	  asNavFor: '.carousel-main',
+
+	$('.product-carousel-main').flickity({
+		prevNextButtons: false,
+		cellAlign: 'center',
+		draggable: false,
+		contain: true,
+		baseClass : '.product-fancybox',
+		pageDots: false
+	});
+	$('.product-carousel-nav').flickity({
+	  asNavFor: '.product-carousel-main',
+	  prevNextButtons: false,
+	  baseClass : '.productfancybox',
+	  slideClass : '.productfancybox',
 	  contain: true,
 	  pageDots: false
 	});
-	*/
+	
 
 	
   if( $(".rewards-medals").length != 0)
