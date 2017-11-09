@@ -77,27 +77,68 @@ $carousel.on( 'scroll.flickity', function() {
   	var diplomasMedals = mixitup( $(".rewards-medals"), {} );
   	//diplomasMedals.getConfig();
   if( $(".rewards-diplomas").length != 0)
-  	var diplomasFilter = mixitup( $(".rewards-diplomas") );
+  	var diplomasFilter = mixitup( $(".rewards-diplomas"), {} );
+
+
+
+
+
+
+  // PRODUCTION FILTER
+  var productionContent = $( $(".production-content") );
+  var productionHeader =  $( $("#production-header") );
+  var productionCatName = [
+  	"cat-vinomaterial",
+  	"cat-konyachniy",
+  	"cat-vodka",
+  	"cat-konyak",
+  	"cat-vino"
+  ]
+  if( productionContent.length != 0 && productionHeader.length != 0)
+  	var productionFilter = mixitup( productionContent, {
+	  	  load: {
+	        filter: "."+productionContent.attr("data-active")
+	    	},
+	    	 callbacks: {
+		        onMixStart: function(state, futureState) {
+						    var headerText = $(".mixitup-control-active").text().trim();
+						    mixAppenHeader( headerText );
+						  }
+		    }
+  	} );
+
+  (function(){
+		var text = $("[data-filter='."+productionContent.attr("data-active")+"']")
+							 .text().trim() || false;
+		mixAppenHeader( text );
+  	
+  })();
+
+  function mixAppenHeader( text ){
+  	productionHeader.find("h1").text( text );
+    productionHeader.addClass("in");
+  }
   
 
-	$(".p-animated p").map(function(i, el){
-		$(el).attr({
-					"data-aos": "fade-up",
-					"data-aos-duration": 600,
-					"data-aos-delay": 100*i});
-		$(el).addClass("invisible");
-		setTimeout(function(){$(el).removeClass("invisible")}, 600);
-		setTimeout(function(){$(el).removeClass("aos-animate")}, 100);
-	})
-	$(".p-animated ul li").map(function(i, el){
-		$(el).attr({
-					"data-aos": "fade-up",
-					"data-aos-duration": 600,
-					"data-aos-delay": 100*i});
-		$(el).addClass("invisible");
-		setTimeout(function(){$(el).removeClass("invisible")}, 600);
-		setTimeout(function(){$(el).removeClass("aos-animate")}, 100);
-	});
+  function productionCnt( productionCatName ){
+   	for( var i = 0; i < productionCatName.length ;i++ ){
+   		var len = $( "."+productionCatName[i] ).length;
+   		$( "#"+productionCatName[i] ).find(".production-cnt").text( len )
+   	}
+  }
+  productionCnt( productionCatName );
+
+
+
+
+
+
+
+
+
+  // MMNENU
+  $("nav#rewards-nav").mmenu();
+  $("nav.production-nav").mmenu();
 
 	// AOS
 	AOS.init({
@@ -106,6 +147,7 @@ $carousel.on( 'scroll.flickity', function() {
 	  duration: 1000,
 	  delay: 100
 	});
+
 	setTimeout(function(){AOS.refresh()}, 300);
 
 
@@ -137,6 +179,8 @@ function dropbtn(){
 		$(this).removeClass("active");
 	});
 }
+dropbtn();
+
 
 
 
@@ -169,8 +213,6 @@ $(".btn-search").on("click", function(){
 	}
 
 } )
-
-dropbtn();
 
 
 

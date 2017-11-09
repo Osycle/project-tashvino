@@ -51,6 +51,7 @@ gulp.task('scripts', () =>
 			//'app/js/jquery.fractionslider.js',
 			'app/js/aos.js',
 			'app/js/mixitup.min.js',
+			'app/js/jquery.mmenu.all.js',
 			'app/js/wow.js',
 			'app/js/jquery.fancybox.js',
 			'app/js/flickity.js'
