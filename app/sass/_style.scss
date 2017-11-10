@@ -573,7 +573,7 @@ button:hover, button:focus{
 }
 
 .inlineble-4{
-	@include inline-ble(96/4+%, 10/20+%);
+	@include inline-ble(20+%, 3.5+%);
 }
 
 .inlineble-5{
@@ -1218,7 +1218,7 @@ $header-height: 120px;
 .form-control{
 	&:focus{
 		border-color: $color_1;
-    box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.275), 0 0 8px rgba( $color_1, 0.8 );
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.275), 0 0 8px rgba( white, 0.8 );
 	}
 }
 // MODAL
@@ -1330,9 +1330,9 @@ $header-height: 120px;
 		}
 		.sub-menu-1{
 			li{
-				width: 33%;
+				width: 40%;
 				display: inline-block;
-				margin: 10px;
+				margin: 5px 15px;
 				background-color: rgba(white, 0.2);
 			}
 			a{
@@ -1395,6 +1395,7 @@ $header-height: 120px;
 	.modal-content{
 
 		@include modal-center(450px, 10%);
+		margin-top: 15px;
 		@media only screen and (max-width: 991px){
 			@include modal-center(300px, 10%);
 		}
@@ -1609,6 +1610,7 @@ main{
 .tp-bannertimer{
 	display: none;
 }
+
 .rev-slider{
 	[class*="btn"]{
 		padding: 15px 75px;
@@ -1663,6 +1665,12 @@ main{
 		}
 	}
 
+	@media only screen and (max-width: 991px){
+		.tparrows{
+			//display: none;
+		}
+
+	}
 	@media only screen and (max-width: 767px){
 
 
@@ -1959,7 +1967,6 @@ main{
 .rewards-nav{
 	padding: 15px;
 	padding-bottom: 30px;
-	text-align: center;
 	position: relative;
 	height: 100%;
 	z-index: 1;
@@ -1988,10 +1995,11 @@ main{
 }
 .modal-body{
 	.rewards-nav-content{
+		text-align: center;
 		font-size: 2em;
 		height: initial;
 		h3{
-			text-align: left;
+			//text-align: left ;
 		}
 		li{
 			margin-top: 10px;
@@ -2006,7 +2014,13 @@ main{
 .rewards-nav-content{
 	position: relative;
 	//height: 480px;
-
+	h3{
+			//text-align: left ;
+	}
+	ul{
+		list-style: disc;
+		padding: 0 45px;
+	}
 	a{
 		//position: relative;
 		transition: transform 0.3s ease-in;
@@ -2049,6 +2063,13 @@ main{
 }
 .production-nav{
 	position: relative;
+	.panel-heading{
+		transition: all 0.3s ease-out;
+	}
+	.panel-heading.in{
+			background: $color_2;
+			//color: white;
+	}
 }
 .production-content{
 	padding: 0 15px;
@@ -2084,7 +2105,7 @@ main{
 			width: 100%;
 			img{
 				transition: all 0.3s ease-in-out;
-		    width: 150px;
+		    width: 190px;
 		    max-width: initial;
 		    padding: 20px 0;
 			}
@@ -2109,6 +2130,7 @@ main{
 			span{
 				width: 100%;
 				opacity: 0;
+				padding: 0 15px;
 				transition: all 0.3s ease-in-out 0s;
 				transform: scale(2) matrix(1, 0, 0, 1, 0, 20);
 				color: white;
@@ -2123,7 +2145,7 @@ main{
 			}
 		}
 		.skin-product-hidden{
-			border: 30px dashed $color_1;
+			//border: 15px solid $color_1;
 			transition: all 0.35s ease-in-out;
 			opacity: 0;
 			transform: scale(3);
@@ -2200,12 +2222,13 @@ main{
 
 .yt-video-content{
 	overflow: hidden;
+	height: 600px;
 	.video{
 		width: 100%;
 	}
 	iframe{
-		width: 70%;
-    height: 470px;
+		width: 95%;
+    height: 550px;
     display: block;
     margin: auto;
     box-shadow: 0px 6px 40px -10px black;
@@ -2346,7 +2369,6 @@ main{
 //-----------------CONTACTS
 
 .feedback-contacts{
-
 	textarea { 
 		resize: none; 
 		margin-top: 20px;
@@ -2358,7 +2380,14 @@ main{
 	}
 
 }
-
+.employees, .feedback-contacts{
+	padding: 0 30px;
+}
+@media only screen and (min-width: 991px){
+	.feedback-contacts{
+		border-right: 1px solid #d1d1d1;
+	}
+}
 //---------------FACTORIES
 
 .factories{
@@ -2642,6 +2671,12 @@ html.mm-blocking #mm-blocker{
 }
 #mm-blocker{
 	//background-color: rgba( $color_1, 0.3 );
+}
+
+
+.fancybox-bg{
+	background: white;
+	opacity: 1 !important;
 }
 
 .fancybox-infobar__body, .fancybox-button{

@@ -19321,8 +19321,8 @@ button:hover, button:focus {
   margin-right: 3%; }
 
 .inlineble-4 figure {
-  width: 24%;
-  margin-right: 0.5%; }
+  width: 20%;
+  margin-right: 3.5%; }
 
 .inlineble-5 figure {
   width: 19.2%;
@@ -19819,8 +19819,8 @@ button:hover, button:focus {
 
 .form-control:focus {
   border-color: #1b2b54;
-  -webkit-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.275), 0 0 8px rgba(27, 43, 84, 0.8);
-  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.275), 0 0 8px rgba(27, 43, 84, 0.8); }
+  -webkit-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.275), 0 0 8px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.275), 0 0 8px rgba(255, 255, 255, 0.8); }
 
 .modal-dialog {
   width: 70%;
@@ -19910,9 +19910,9 @@ button:hover, button:focus {
       .min-menu-modal .menu-list .sub-parent a, .min-menu-modal .footer-menu .sub-parent a {
         padding: 10px 0; }
     .min-menu-modal .menu-list .sub-menu-1 li, .min-menu-modal .footer-menu .sub-menu-1 li {
-      width: 33%;
+      width: 40%;
       display: inline-block;
-      margin: 10px;
+      margin: 5px 15px;
       background-color: rgba(255, 255, 255, 0.2); }
     .min-menu-modal .menu-list .sub-menu-1 a, .min-menu-modal .footer-menu .sub-menu-1 a {
       font-size: 1.1em;
@@ -19958,7 +19958,8 @@ button:hover, button:focus {
   margin-left: -225px;
   margin-top: -5%;
   left: 50%;
-  top: 50%; }
+  top: 50%;
+  margin-top: 15px; }
   @media only screen and (max-width: 991px) {
     .feedback-modal .modal-content {
       width: 300px;
@@ -20364,7 +20365,6 @@ main {
 .rewards-nav {
   padding: 15px;
   padding-bottom: 30px;
-  text-align: center;
   position: relative;
   height: 100%;
   z-index: 1;
@@ -20386,10 +20386,9 @@ main {
   height: 100%; }
 
 .modal-body .rewards-nav-content {
+  text-align: center;
   font-size: 2em;
   height: initial; }
-  .modal-body .rewards-nav-content h3 {
-    text-align: left; }
   .modal-body .rewards-nav-content li {
     margin-top: 10px; }
     .modal-body .rewards-nav-content li a {
@@ -20399,6 +20398,9 @@ main {
 
 .rewards-nav-content {
   position: relative; }
+  .rewards-nav-content ul {
+    list-style: disc;
+    padding: 0 45px; }
   .rewards-nav-content a {
     -webkit-transition: -webkit-transform 0.3s ease-in;
     transition: -webkit-transform 0.3s ease-in;
@@ -20429,6 +20431,12 @@ main {
 
 .production-nav {
   position: relative; }
+  .production-nav .panel-heading {
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
+  .production-nav .panel-heading.in {
+    background: #eaf4de; }
 
 .production-content {
   padding: 0 15px; }
@@ -20469,7 +20477,7 @@ main {
         -webkit-transition: all 0.3s ease-in-out;
         -o-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
-        width: 150px;
+        width: 190px;
         max-width: initial;
         padding: 20px 0; }
     .production-content figure .skin-product, .production-content figure .skin-product-hidden {
@@ -20503,6 +20511,7 @@ main {
       .production-content figure .skin-product span {
         width: 100%;
         opacity: 0;
+        padding: 0 15px;
         -webkit-transition: all 0.3s ease-in-out 0s;
         -o-transition: all 0.3s ease-in-out 0s;
         transition: all 0.3s ease-in-out 0s;
@@ -20517,7 +20526,6 @@ main {
         letter-spacing: 0.5px;
         word-wrap: break-word; }
     .production-content figure .skin-product-hidden {
-      border: 30px dashed #1b2b54;
       -webkit-transition: all 0.35s ease-in-out;
       -o-transition: all 0.35s ease-in-out;
       transition: all 0.35s ease-in-out;
@@ -20568,12 +20576,13 @@ main {
   word-break: break-all; }
 
 .yt-video-content {
-  overflow: hidden; }
+  overflow: hidden;
+  height: 600px; }
   .yt-video-content .video {
     width: 100%; }
   .yt-video-content iframe {
-    width: 70%;
-    height: 470px;
+    width: 95%;
+    height: 550px;
     display: block;
     margin: auto;
     -webkit-box-shadow: 0px 6px 40px -10px black;
@@ -20658,6 +20667,13 @@ main {
 .feedback-contacts .submit {
   background-color: #1b2b54;
   color: white; }
+
+.employees, .feedback-contacts {
+  padding: 0 30px; }
+
+@media only screen and (min-width: 991px) {
+  .feedback-contacts {
+    border-right: 1px solid #d1d1d1; } }
 
 .factories .info-factories {
   margin-top: 30px; }
@@ -20844,6 +20860,10 @@ main {
 
 html.mm-blocking #mm-blocker {
   background: rgba(27, 43, 84, 0.7); }
+
+.fancybox-bg {
+  background: white;
+  opacity: 1 !important; }
 
 .fancybox-button:hover:not([disabled]) {
   background-color: #1b2b54; }

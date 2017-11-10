@@ -15,6 +15,14 @@ $(function(){
 			animationEffect : "fade",
 			transitionEffect: "zoom-in-out"
 		});
+	if( $("[data-fancybox='gallery']").length != 0 )
+		$("[data-fancybox='gallery']").fancybox({
+			afterShow : function( instance, current ) {
+			},
+			animationEffect : "fade",
+			transitionEffect: "zoom-in-out"
+		});
+
 	//WOW
 	new WOW({
 		offset: 30
@@ -102,6 +110,8 @@ $carousel.on( 'scroll.flickity', function() {
   	"cat-konyak",
   	"cat-vino"
   ]
+ 	var oldMixActive = {};
+ 	var mixActive = {};
   if( productionContent.length != 0 && productionHeader.length != 0)
   	var productionFilter = mixitup( productionContent, {
 	  	  load: {
@@ -109,22 +119,47 @@ $carousel.on( 'scroll.flickity', function() {
 	    	},
 	    	 callbacks: {
 		        onMixStart: function(state, futureState) {
-						    var headerText = $(".mixitup-control-active").text().trim();
+
+		        		if( $(oldMixActive).length != 0)
+		        			$(oldMixActive).closest(".panel-heading").removeClass("in");
+
+		        		mixActive = $( $(".mixitup-control-active") );
+
+						   	var headerText = mixActive.text().trim();
+
+						    mixActive.closest(".panel-heading").addClass("in");
+
+						   	oldMixActive = mixActive;
+
 						    mixAppenHeader( headerText );
+
 						  }
 		    }
   	} );
 
   (function(){
-		var text = $("[data-filter='."+productionContent.attr("data-active")+"']")
-							 .text().trim() || false;
+  	var mixStartActive = $( $("[data-filter='."+productionContent.attr("data-active")+"']") );
+  	oldMixActive = mixStartActive;
+		var text = mixStartActive
+											.closest(".panel-heading")
+											.addClass("in")
+											.end()
+											.text()
+											.trim() || false;
+
+		console.log( mixStartActive );
 		mixAppenHeader( text );
-  	
   })();
 
   function mixAppenHeader( text ){
-  	productionHeader.find("h1").text( text );
-    productionHeader.addClass("in");
+
+  	if(!text) return;
+  	productionHeader
+  		.find("h1")
+  		.text( text )
+  		.end()
+  		.addClass("in");
+
   }
   
 
@@ -135,6 +170,12 @@ $carousel.on( 'scroll.flickity', function() {
    	}
   }
   productionCnt( productionCatName );
+
+
+
+
+
+
 
 
 
