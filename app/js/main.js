@@ -73,7 +73,7 @@ $carousel.on( 'scroll.flickity', function() {
 	$('.product-carousel-main').flickity({
 		prevNextButtons: false,
 		cellAlign: 'center',
-		draggable: false,
+		draggable: !(checkView(992)),
 		contain: true,
 		baseClass : '.product-fancybox',
 		pageDots: false
@@ -81,6 +81,7 @@ $carousel.on( 'scroll.flickity', function() {
 	$('.product-carousel-nav').flickity({
 	  asNavFor: '.product-carousel-main',
 	  prevNextButtons: false,
+	  draggable: !false,
 	  baseClass : '.productfancybox',
 	  slideClass : '.productfancybox',
 	  contain: true,
@@ -124,11 +125,8 @@ $carousel.on( 'scroll.flickity', function() {
 		        			$(oldMixActive).closest(".panel-heading").removeClass("in");
 
 		        		mixActive = $( $(".mixitup-control-active") );
-
 						   	var headerText = mixActive.text().trim();
-
 						    mixActive.closest(".panel-heading").addClass("in");
-
 						   	oldMixActive = mixActive;
 
 						    mixAppenHeader( headerText );
@@ -141,6 +139,7 @@ $carousel.on( 'scroll.flickity', function() {
   	var mixStartActive = $( $("[data-filter='."+productionContent.attr("data-active")+"']") );
   	oldMixActive = mixStartActive;
 		var text = mixStartActive
+
 											.closest(".panel-heading")
 											.addClass("in")
 											.end()
@@ -170,8 +169,6 @@ $carousel.on( 'scroll.flickity', function() {
    	}
   }
   productionCnt( productionCatName );
-
-
 
 
 
@@ -291,25 +288,11 @@ $( window ).on("scroll", function(e){
 
 
 
-
- $.fn.fadeToggleBool = function( dura = 290 ){
- 	var self = $( $(this) ),
- 		 bool = self.css("display") == "none";
-
-	self.fadeToggle({
-
-		duration: dura,
-		easing: "linear"
-
-	});
-
-	return bool;
- }
-
-
 setInterval( function(){
 	bannerImgToggle();
 }, 6000 );
+
+
 
 	});//$
 }) (jQuery);

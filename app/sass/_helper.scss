@@ -323,11 +323,40 @@
 
 
 
+@media (max-width: 991px){
 
+	.sm-align-left{
+		text-align: left !important;
+	}
+	.sm-align-center{
+		text-align: center !important;
+	}
+	.sm-align-right{
+		text-align: right !important;
+	}
+
+
+}
 
 
 @media (min-width: 992px){
 
+	.md-float-left{
+		float: left;
+	}
+	.md-float-right{
+		float: right;
+	}
+	.md-align-left{
+		text-align: left !important;
+	}
+	.md-align-center{
+		text-align: center !important;
+	}
+	.md-align-right{
+		text-align: right !important;
+	}
+	
 
 	@for $i from 12 through 1 {
 
