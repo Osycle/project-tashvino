@@ -239,7 +239,7 @@ $(".btn-search").on("click", function(){
 		statusSearchView = !statusSearchView;
 		$(".nav-search-content")
 			.find(".btn-search-sub")
-			.add("input")
+			.add(".nav-search-content input")
 			.removeClass("hide").addClass("show");
 
 		setTimeout(function(){ 
@@ -253,7 +253,7 @@ $(".btn-search").on("click", function(){
 		setTimeout(function(){
 			$(".nav-search-content")
 			.find(".btn-search-sub")
-			.add("input")
+			.add(".nav-search-content input")
 			.addClass("hide").removeClass("show")
 		}, 300);
 	}

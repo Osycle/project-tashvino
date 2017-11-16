@@ -1277,6 +1277,7 @@ $header-height: 120px;
 		resize: none;
 		margin-top: 30px;
 		height: 120px;	
+		overflow-x: hidden;
 	}
 	.form-control{
 		&:focus{
