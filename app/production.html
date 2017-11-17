@@ -121,6 +121,7 @@
 									<ul class="sub-menu-1">
 										<li><a href="factories.html">Наши заводы</a></li>
 										<li><a href="documents.html">Документы</a></li>
+										<li><a href="govermance.html">Руководство</a></li>
 									</ul>
 								</li>
 								<li><a href="vacancies.html">Вакансии</a></li>
@@ -275,6 +276,95 @@
 
 
 
+
+
+
+
+	<!-- FEEDBACK-ORDER -->
+	<div class="feedback-modal modal fade" id="feedback-order" tabindex="-1" role="dialog" aria-labelledby="feedback">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+
+	    	<button type="button" class="btn" data-dismiss="modal">
+	    		<span class="icon-bar"></span>
+	    		<span class="icon-bar"></span>
+	    	</button>
+
+	      <div class="modal-body">
+
+
+					<div class="col-md-12 success-info">
+						<div id="success-message"></div>
+						<div id="fail-message"></div>
+					</div>
+					<h2 class="align-center">Заказать</h2>
+	      	<form id="feedback-order-form" method="post" action="feedback.php" class="contact-form">
+
+						<label>Ваше имя</label>
+						<input class="form-control" 
+									 type="text" 
+									 name="name" 
+									 placeholder="Имя" autocomplete="off" required="required"
+									 data-toggle="popover" 
+									 data-trigger="focus"/>
+
+						<label>Имя организации</label>
+						<input class="form-control" 
+									 type="text" 
+									 name="name" 
+									 placeholder="Имя организации" autocomplete="off" required="required"
+									 data-toggle="popover" 
+									 data-trigger="focus"/>
+
+
+
+						<label>Электронная почта</label>
+						<input class="form-control" 
+									 type="email" 
+									 name="email" 
+									 placeholder="email" autocomplete="off" required="required"
+									 data-toggle="popover" 
+									 data-trigger="focus"/>
+
+
+						<label>Номер телефона</label>
+						<input class="form-control" type="tel" 
+									 name="phone" 
+									 placeholder="+998 (xx) xxx-xx-xx" autocomplete="off" required="required"
+									 minlength="14"
+									 data-toggle="popover" 
+									 data-trigger="focus"/>
+
+
+
+						<textarea class="form-control" 
+									 name="message" 
+									 placeholder="Сообщение"></textarea>
+						
+	      	</form>
+			      <div class="modal-footer">
+			      	<button type="submit" class="align-right btn-opacity" form="feedback-order-form" autofocus="autofocus">Отправить</button>
+			      </div>
+
+	      </div>
+
+	    </div>
+	  </div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		<!-- BANNER -->
 		<div id="banner" class="row" style="background-image: url('img/slider/slide-2.jpg');" 
 																 data-toggle-img="background-image: url('img/slider/slide-3.jpg');" >
@@ -330,49 +420,6 @@
 		    	<!-- 	ACCORDION	 -->
 					<div class="panel-group" id="production-accordion" class="accordion" aria-multiselectable="true">
 
-					  <div class="panel panel-default" id="cat-vinomaterial">
-
-					    <div class="panel-heading" role="tab">
-					      <h4 class="panel-title">
-					        <a role="button" data-filter=".cat-vinomaterial" data-sort="default:random">                     
-					          Виноматериал
-					        </a>
-					         <i class="fa fa-angle"></i>
-					         <span class="production-cnt"></span>
-					      </h4>
-					    </div>
-
-					    <div id="collapseOne" class="panel-collapse collapse" aria-labelledby="headingOne">
-					      <div class="panel-body"></div>
-					    </div>
-
-					  </div>
-
-
-
-					  <div class="panel panel-default" id="cat-konyachniy">
-
-					    <div class="panel-heading" role="tab">
-					      <h4 class="panel-title">
-					        <a role="button" data-filter=".cat-konyachniy" data-sort="default:random">
-					          Коньячный Дистиллят
-					        </a>
-					        <i class="fa fa-angle"></i>
-					        <span class="production-cnt"></span>
-					      </h4>
-					    </div>
-
-					    <div id="collapseTwo" class="panel-collapse collapse" aria-labelledby="headingTwo">
-					      <div class="panel-body"></div>
-					    </div>
-					  </div>
-
-
-
-
-
-
-
 
 
 
@@ -389,7 +436,7 @@
 					    <div id="collapse-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-3">
 					      <div class="panel-body"></div>
 					    </div>
-					  </div>
+					 </div>
 
 
 
@@ -433,431 +480,485 @@
 
 
 
+					  <br>
+					  <br>
+
+
+
+					  <div class="panel panel-default" id="cat-vinomaterial">
+
+					    <div class="panel-heading" role="tab">
+					      <h4 class="panel-title">
+					        <a role="button" data-filter=".cat-vinomaterial" data-sort="default:random">                     
+					          Виноматериал
+					        </a>
+					         <i class="fa fa-angle"></i>
+					      </h4>
+					    </div>
+
+					    <div id="collapseOne" class="panel-collapse collapse" aria-labelledby="headingOne">
+					      <div class="panel-body"></div>
+					    </div>
+					  </div>
+
+
+
+					  <div class="panel panel-default" id="cat-konyachniy">
+
+					    <div class="panel-heading" role="tab">
+					      <h4 class="panel-title">
+					        <a role="button" data-filter=".cat-konyachniy" data-sort="default:random">
+					          Коньячный Дистиллят
+					        </a>
+					        <i class="fa fa-angle"></i>
+					      </h4>
+					    </div>
+
+					    <div id="collapseTwo" class="panel-collapse collapse" aria-labelledby="headingTwo">
+					      <div class="panel-body"></div>
+					    </div>
+					  </div>
+
+
+
+
 					</div>
 		
 		    </div>
 
 
 
-
-		    <div class="col-md-9 production-content inlineble-3 figure-m-v-10" data-active="cat-konyak">
-
-
+		    <!-- Параметр активности data-activ="cat-konyak" -->
+		    <div class="col-md-9 production-content inlineble-3 figure-m-v-10" data-active="cat-vinomaterial">
 
 
-		    			<figure class="mix cat-vinomaterial production-item">
-						  	<a href="production-in.html">
+
+
+
+
+
+
+
+		    			<!-- Виноматериал -->
+		    			<div class="mix cat-vinomaterial production-item">
+		    				<div class="img-content">
+		    					<img src="img/other/1.jpg"/>
+		    				</div>
+		    				<div class="text-content p-h-30 p-v-30">
+		    					<p>
+										При изготовлении виноматериалов для нас принципиальным 
+										вопросом является установление четких показателей качества 
+										для готовой продукции каждого типа вина. Мы предлагаем красные, 
+										белые и крепленые виноматериалы из таких сортов винограда как: 
+										<b><em>Каберне</em>, </b>
+										<b><em>Саперави</em>, </b>
+										<b><em>Тавквери</em>, </b>
+										<b><em>Пино</em>, </b>
+											для красных вин, а так же 
+										<b><em>Ркацители</em>, </b>
+										<b><em>Баян-Ширей</em>, </b>
+										<b><em>Сояки</em></b> —
+											для белых. 
+										Благодаря тщательному контролю за производством и хранением наших виноматериалов, 
+										вина изготовлённые из наших виноматериалов обладают высоким качеством.
+		    					</p>
+		    				</div>
+ 								
+ 								<div class="btn-content p-h-30">
+
+	 								<button class="btn-blue" data-toggle="modal" data-target="#feedback-order">
+	 									<span>Заказать</span>
+	 								</button>
+
+ 								</div>
+						  	
+
+					  		<div class="file-content align-center">
+					  			<div class="file-item box-90">
+					  				<a href="files/file.xls" download>Скачать сертификаты</a>
+					  			</div>
+					  		</div>
+						  
+						  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						  <!-- Коньячный Дистиллят -->
+						  <div class="mix cat-konyachniy production-item">
+								<div class="img-content">
+		    					<img src="img/other/2.jpg"/>
+		    				</div>
+		    				<div class="text-content p-h-30 p-v-30">
+		    					<p>
+										Обратившись к нам, вы получаете продукт напрямую от производителя. 
+										При производстве коньячного дистиллята мы используем виноматериалы высокого качества, 
+										а также осуществляем тщательный технологический контроль на 
+										всех стадиях перегонки и выдержки спирта. Наш коньячный дистиллят ориентированный на экспорт имеет выдержку до 5 лет, что позволяет изготавливать на его основе высококачественные бренди и коньяки. Коньячный дистиллят, производимый нами, имеет исключительно виноградное происхождение.
+		    					</p>
+		    				</div>
+ 								
+ 								<div class="btn-content p-h-30">
+
+	 								<button class="btn-blue" class="btn-blue" data-toggle="modal" data-target="#feedback-order">
+	 									<span>Заказать</span>
+	 								</button>
+
+ 								</div>
+						  	
+
+					  		<div class="file-content align-center">
+					  			<div class="file-item box-90">
+					  				<a href="files/file.xls" download>Скачать сертификаты</a>
+					  			</div>
+					  		</div>
+						  
+						  </div>
+						  
+
+
+
+
+
+
+
+
+
+
+
+
+
+						  <!-- Водка -->
+						  <figure class="mix cat-vodka production-item">
+						  	<a href="production-in.html" >
 						  		<div class="img-content">
-						  			<img src="img/production/1-1.jpg"/>
+						  			<img src="img/production/Водка/Абрикосовая.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Абрикосовая</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+						  
+						  <figure class="mix cat-vodka production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Водка/Айвовая.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Айвовая</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+						  
+						  <figure class="mix cat-vodka production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Водка/Айс Даймонд.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Айс Даймонд</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+						  
+						  <figure class="mix cat-vodka production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Водка/Белое добро.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Белое добро</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+						  
+						  <figure class="mix cat-vodka production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Водка/Белый мед.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Белый мед</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+						  
+						  <figure class="mix cat-vodka production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Водка/Грэйп.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Грэйп</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+
+						   
+						  <figure class="mix cat-vodka production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Водка/Индиго.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Индиго</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+
+						   
+						  <figure class="mix cat-vodka production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Водка/Грэйп.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Грэйп</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+
+						   
+						  <figure class="mix cat-vodka production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Водка/Кобальт.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Кобальт</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+
+						   
+						  <figure class="mix cat-vodka production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Водка/Кора байир.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Кора байир</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+
+						   
+						  <figure class="mix cat-vodka production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Водка/Любимица.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Любимица</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+
+						   
+						  <figure class="mix cat-vodka production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Водка/Грэйп.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Грэйп</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+						   
+						  <figure class="mix cat-vodka production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Водка/Народный стиль.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Народный стиль</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+						   
+						  <figure class="mix cat-vodka production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Водка/Нежная.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Нежная</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+						   
+						  <figure class="mix cat-vodka production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Водка/Ок чой 500.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Ок чой 500</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+						   
+						  <figure class="mix cat-vodka production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Водка/Ок чой 700.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Ок чой 700</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						  <!-- Коньяк -->
+						  <figure class="mix cat-konyak production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Коньяк/Белый ястреб.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Белый ястреб</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+						  
+						  <figure class="mix cat-konyak production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Коньяк/Золотой Аист.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Золотой Аист</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+						  
+						  <figure class="mix cat-konyak production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Коньяк/коньяк Узбекистан 25 лет.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>коньяк Узбекистан 25 лет</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+						  
+						  <figure class="mix cat-konyak production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Коньяк/Легенда востока.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Легенда востока</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+						  
+						  <figure class="mix cat-konyak production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Коньяк/Олд барон.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Олд барон</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+						  
+						  <figure class="mix cat-konyak production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Коньяк/плоский Ташкент ХО.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>плоский Ташкент ХО</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+
+
+						  <figure class="mix cat-konyak production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Коньяк/Ташкент ХО.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Ташкент ХО</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+
+						  <figure class="mix cat-konyak production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Коньяк/Узбекистан ординарный.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Узбекистан ординарный</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+						  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						  <!-- Вино -->
+							<figure class="mix cat-vino production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Вино/Баян ширей.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Баян ширей</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+						  
+						  <figure class="mix cat-vino production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Вино/Бухара вино.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Бухара вино</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+						  
+						  <figure class="mix cat-vino production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Вино/Кагоры.jpg"/>
 						  		</div>
 						  		<div class="skin-product"><span>Кагоры</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
 						  </figure>
-
-						  <figure class="mix cat-vinomaterial production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-2.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Кобальт</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-
-						  <figure class="mix cat-vinomaterial production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-3.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Легенда востока</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-
-						  <figure class="mix cat-vinomaterial production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-4.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Золотой Аист</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
 						  
-						  <figure class="mix cat-vinomaterial production-item">
+						  <figure class="mix cat-vino production-item">
 						  	<a href="production-in.html" >
 						  		<div class="img-content">
-						  			<img src="img/production/1-5.jpg"/>
+						  			<img src="img/production/Вино/Лейли и меджнун.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Кобальт</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-
-						  <figure class="mix cat-vinomaterial production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-6.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Легенда востока</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-
-						  <figure class="mix cat-vinomaterial production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-7.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Золотой Аист</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-						  
-						  <figure class="mix cat-vinomaterial production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-8.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Кобальт</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-
-						  <figure class="mix cat-vinomaterial production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-9.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Легенда востока</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-						  <figure class="mix cat-konyachniy production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-1.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Золотой Аист</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-						  
-						  <figure class="mix cat-konyachniy production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-2.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Кобальт</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-
-						  <figure class="mix cat-konyachniy production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-3.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Легенда востока</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-
-						  <figure class="mix cat-konyachniy production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-4.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Легенда востока</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-
-						  <figure class="mix cat-konyachniy production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-5.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Легенда востока</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-
-						  <figure class="mix cat-konyachniy production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-6.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Золотой Аист</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-
-						  <figure class="mix cat-konyachniy production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-7.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Узбекистан ординарный</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-
-						  <figure class="mix cat-konyachniy production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-1.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Золотой Аист</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-						  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-						  <figure class="mix cat-vodka production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-1.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Легенда востока</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-						  
-						  <figure class="mix cat-vodka production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-2.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Золотой Аист</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-						  
-						  <figure class="mix cat-vodka production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-3.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Легенда востока</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-						  
-						  <figure class="mix cat-vodka production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-4.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Золотой Аист</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-						  
-						  <figure class="mix cat-vodka production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-5.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Легенда востока</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-						  
-						  <figure class="mix cat-vodka production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-6.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Узбекистан ординарный</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-
-
-
-
-
-
-
-
-
-
-						  <figure class="mix cat-konyak production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-1.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Узбекистан ординарный</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-						  
-						  <figure class="mix cat-konyak production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-2.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Золотой Аист</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-						  
-						  <figure class="mix cat-konyak production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-3.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Узбекистан ординарный</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-						  
-						  <figure class="mix cat-konyak production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-4.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Золотой Аист</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-						  
-						  <figure class="mix cat-konyak production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-5.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Золотой Аист</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-						  
-						  <figure class="mix cat-konyak production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-6.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Легенда востока</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-
-
-						  <figure class="mix cat-konyak production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-1.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Легенда востока</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-						  
-						  <figure class="mix cat-vodka production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-2.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Золотой Аист</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-						  
-						  <figure class="mix cat-konyak production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-3.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Золотой Аист</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-						  
-						  <figure class="mix cat-vodka production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-4.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Легенда востока</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-						  
-						  <figure class="mix cat-konyak production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-5.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Золотой Аист</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-						  
-						  <figure class="mix cat-konyak production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-6.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Легенда востока</span></div>
-						  		<div class="skin-product-hidden"></div>
-						  	</a>
-						  </figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-							<figure class="mix cat-vino production-item">
-						  	<a href="production-in.html" >
-						  		<div class="img-content">
-						  			<img src="img/production/1-2.jpg"/>
-						  		</div>
-						  		<div class="skin-product"><span>Золотой Аист</span></div>
+						  		<div class="skin-product"><span>Лейли и меджнун</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
 						  </figure>
@@ -865,9 +966,9 @@
 						  <figure class="mix cat-vino production-item">
 						  	<a href="production-in.html" >
 						  		<div class="img-content">
-						  			<img src="img/production/1-3.jpg"/>
+						  			<img src="img/production/Вино/Ркацители.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Золотой Аист</span></div>
+						  		<div class="skin-product"><span>Ркацители</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
 						  </figure>
@@ -875,9 +976,9 @@
 						  <figure class="mix cat-vino production-item">
 						  	<a href="production-in.html" >
 						  		<div class="img-content">
-						  			<img src="img/production/1-4.jpg"/>
+						  			<img src="img/production/Вино/Самарканд вино.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Золотой Аист</span></div>
+						  		<div class="skin-product"><span>Самарканд вино</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
 						  </figure>
@@ -885,9 +986,9 @@
 						  <figure class="mix cat-vino production-item">
 						  	<a href="production-in.html" >
 						  		<div class="img-content">
-						  			<img src="img/production/1-5.jpg"/>
+						  			<img src="img/production/Вино/Саперави.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Золотой Аист</span></div>
+						  		<div class="skin-product"><span>Саперави</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
 						  </figure>
@@ -895,9 +996,19 @@
 						  <figure class="mix cat-vino production-item">
 						  	<a href="production-in.html" >
 						  		<div class="img-content">
-						  			<img src="img/production/1-6.jpg"/>
+						  			<img src="img/production/Вино/Семь Красавиц.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Золотой Аист</span></div>
+						  		<div class="skin-product"><span>Семь Красавиц</span></div>
+						  		<div class="skin-product-hidden"></div>
+						  	</a>
+						  </figure>
+						  
+						  <figure class="mix cat-vino production-item">
+						  	<a href="production-in.html" >
+						  		<div class="img-content">
+						  			<img src="img/production/Вино/Ташкент вино.jpg"/>
+						  		</div>
+						  		<div class="skin-product"><span>Ташкент вино</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
 						  </figure>

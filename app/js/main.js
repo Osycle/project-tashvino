@@ -45,6 +45,7 @@ var $carousel = $('.gallery-content.carousel').flickity({
 		arrowShape: arrowStyle,
 		//prevNextButtons: false,
 		//rightToLeft: true,
+		initialIndex: 2,
 		draggable: !(checkView(992)) ,
 		friction: 0.5,
 		contain: true,
@@ -53,7 +54,7 @@ var $carousel = $('.gallery-content.carousel').flickity({
   imagesLoaded: true,
   percentPosition: false
 });
-var $imgs = $carousel.find('.gallery-item.carousel-cell img');
+/*var $imgs = $carousel.find('.gallery-item.carousel-cell img');
 // get transform property
 var docStyle = document.documentElement.style;
 var transformProp = typeof docStyle.transform == 'string' ?
@@ -67,13 +68,13 @@ $carousel.on( 'scroll.flickity', function() {
     var x = ( slide.target + flkty.x ) * -1/3;
     img.style[ transformProp ] = 'translateX(' + x  + 'px)';
   });
-});
+});*/
 
 
 	$('.product-carousel-main').flickity({
 		prevNextButtons: false,
 		cellAlign: 'center',
-		draggable: false,
+		draggable: !(checkView(992)),
 		contain: true,
 		baseClass : '.product-fancybox',
 		pageDots: false
@@ -81,6 +82,7 @@ $carousel.on( 'scroll.flickity', function() {
 	$('.product-carousel-nav').flickity({
 	  asNavFor: '.product-carousel-main',
 	  prevNextButtons: false,
+	  draggable: !false,
 	  baseClass : '.productfancybox',
 	  slideClass : '.productfancybox',
 	  contain: true,
@@ -124,11 +126,8 @@ $carousel.on( 'scroll.flickity', function() {
 		        			$(oldMixActive).closest(".panel-heading").removeClass("in");
 
 		        		mixActive = $( $(".mixitup-control-active") );
-
 						   	var headerText = mixActive.text().trim();
-
 						    mixActive.closest(".panel-heading").addClass("in");
-
 						   	oldMixActive = mixActive;
 
 						    mixAppenHeader( headerText );
@@ -141,6 +140,7 @@ $carousel.on( 'scroll.flickity', function() {
   	var mixStartActive = $( $("[data-filter='."+productionContent.attr("data-active")+"']") );
   	oldMixActive = mixStartActive;
 		var text = mixStartActive
+
 											.closest(".panel-heading")
 											.addClass("in")
 											.end()
@@ -170,8 +170,6 @@ $carousel.on( 'scroll.flickity', function() {
    	}
   }
   productionCnt( productionCatName );
-
-
 
 
 
@@ -242,7 +240,7 @@ $(".btn-search").on("click", function(){
 		statusSearchView = !statusSearchView;
 		$(".nav-search-content")
 			.find(".btn-search-sub")
-			.add("input")
+			.add(".nav-search-content input")
 			.removeClass("hide").addClass("show");
 
 		setTimeout(function(){ 
@@ -256,7 +254,7 @@ $(".btn-search").on("click", function(){
 		setTimeout(function(){
 			$(".nav-search-content")
 			.find(".btn-search-sub")
-			.add("input")
+			.add(".nav-search-content input")
 			.addClass("hide").removeClass("show")
 		}, 300);
 	}
@@ -291,6 +289,7 @@ $( window ).on("scroll", function(e){
 
 
 
+<<<<<<< HEAD
 
  $.fn.fadeToggleBool = function( dura ){
  	var self = $( $(this) ),
@@ -307,9 +306,13 @@ $( window ).on("scroll", function(e){
  }
 
 
+=======
+>>>>>>> 92c496856f7528cf78ee3c56452adcb2301a9009
 setInterval( function(){
 	bannerImgToggle();
 }, 6000 );
+
+
 
 	});//$
 }) (jQuery);
