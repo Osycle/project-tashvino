@@ -45,6 +45,7 @@ var $carousel = $('.gallery-content.carousel').flickity({
 		arrowShape: arrowStyle,
 		//prevNextButtons: false,
 		//rightToLeft: true,
+		initialIndex: 2,
 		draggable: !(checkView(992)) ,
 		friction: 0.5,
 		contain: true,
@@ -53,7 +54,7 @@ var $carousel = $('.gallery-content.carousel').flickity({
   imagesLoaded: true,
   percentPosition: false
 });
-var $imgs = $carousel.find('.gallery-item.carousel-cell img');
+/*var $imgs = $carousel.find('.gallery-item.carousel-cell img');
 // get transform property
 var docStyle = document.documentElement.style;
 var transformProp = typeof docStyle.transform == 'string' ?
@@ -67,7 +68,7 @@ $carousel.on( 'scroll.flickity', function() {
     var x = ( slide.target + flkty.x ) * -1/3;
     img.style[ transformProp ] = 'translateX(' + x  + 'px)';
   });
-});
+});*/
 
 
 	$('.product-carousel-main').flickity({

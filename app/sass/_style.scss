@@ -2572,6 +2572,9 @@ main{
 .govermance-item{
 	padding: 10px 20px;
 	border-bottom: 1px solid #ababab;
+	&:last-child{
+		border-bottom: 1px solid transparent;
+	}
 	li{
 		margin: 10px 0;
 		font-weight: 500;
