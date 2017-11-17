@@ -292,7 +292,7 @@ $( window ).on("scroll", function(e){
 
 
 
- $.fn.fadeToggleBool = function( dura = 290 ){
+ $.fn.fadeToggleBool = function( dura ){
  	var self = $( $(this) ),
  		 bool = self.css("display") == "none";
 

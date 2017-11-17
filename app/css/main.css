@@ -20312,7 +20312,8 @@ main {
 .rewards-medals, .rewards-diplomas {
   border-bottom: 2px solid rgba(0, 0, 0, 0.1); }
   .rewards-medals .img-content, .rewards-diplomas .img-content {
-    display: grid; }
+    display: grid;
+    width: 190px; }
   .rewards-medals figure:hover, .rewards-diplomas figure:hover {
     -webkit-filter: contrast(130%);
     filter: contrast(130%); }
