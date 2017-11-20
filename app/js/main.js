@@ -261,7 +261,7 @@ $(".btn-search").on("click", function(){
 
 } )
 
-
+$(".tp-rightarrow").click()
 
 //RESIZE
 $( window ).on("resize", function(e){
@@ -289,25 +289,6 @@ $( window ).on("scroll", function(e){
 
 
 
-<<<<<<< HEAD
-
- $.fn.fadeToggleBool = function( dura ){
- 	var self = $( $(this) ),
- 		 bool = self.css("display") == "none";
-
-	self.fadeToggle({
-
-		duration: dura,
-		easing: "linear"
-
-	});
-
-	return bool;
- }
-
-
-=======
->>>>>>> 92c496856f7528cf78ee3c56452adcb2301a9009
 setInterval( function(){
 	bannerImgToggle();
 }, 6000 );
