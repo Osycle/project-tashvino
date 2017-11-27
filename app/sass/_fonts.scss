@@ -16,6 +16,15 @@ $path: "../fonts";
 
 
 
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url($path+'/BebasNeueRegular.eot');
+    src: url($path+'/BebasNeueRegular.eot') format('embedded-opentype'),
+         url($path+'/BebasNeueRegular.woff2') format('woff2'),
+         url($path+'/BebasNeueRegular.woff') format('woff'),
+         url($path+'/BebasNeueRegular.ttf') format('truetype'),
+         url($path+'/BebasNeueRegular.svg#BebasNeueRegular') format('svg');
+}
 
 
 

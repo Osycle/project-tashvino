@@ -102,6 +102,22 @@ $carousel.on( 'scroll.flickity', function() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // PRODUCTION FILTER
   var productionContent = $( $(".production-content") );
   var productionHeader =  $( $("#production-header") );
@@ -147,7 +163,6 @@ $carousel.on( 'scroll.flickity', function() {
 											.text()
 											.trim() || false;
 
-		console.log( mixStartActive );
 		mixAppenHeader( text );
   })();
 
@@ -181,11 +196,91 @@ $carousel.on( 'scroll.flickity', function() {
 
 
 
+  $("#checkage").on('show.bs.modal', function (e) {
+  	
+	})
+  $(".agree-on").on( "click", function (e) {
+
+  	checkage.status = true;
+  	checkageJSet();
+  	checkageOff();
+
+  });
+	$(".agree-off").on( "click", function (e) {
+  	
+  	checkage.status = !true;
+  	checkageJSet();
+
+  	var redirect  = $(this).attr("data-redirect") || null
+
+  	if ( redirect ) 
+  		location.assign( redirect );
+  		
+  });
+	
 
 
-  // MMNENU
-  $("nav#rewards-nav").mmenu();
-  $("nav.production-nav").mmenu();
+	
+
+
+
+
+
+
+	// CHECKAGE
+	var checkage = {
+				status: false
+			}
+
+	var checkageModal = $("#checkage") || null;
+
+	if ( checkageModal )
+		$("body").append ( checkageModal );
+
+	function checkageJSet () {
+		sessionStorage.checkage = JSON.stringify( checkage );
+	}
+	function checkageJParse () {
+		checkage = JSON.parse ( sessionStorage.checkage )
+	}
+	function checkageOff () {
+		$("#page").show();
+		$(".tp-rightarrow").click();
+		checkageModal.modal("hide");
+	}
+	function checkageOn () {
+		checkageModal.modal().off("click");
+	}
+	//console.log ( checkageModal.attr("data-status") != "off" );
+	if ( checkageModal && checkageModal.attr("data-status")  != "off" ){
+
+		sessionStorage.checkage ?
+			checkageJParse()
+		: 
+			checkageJSet();
+
+
+		checkage.status ?
+			checkageOff()
+		:
+			checkageOn();
+
+	}else checkageOff();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	// AOS
 	AOS.init({
@@ -194,7 +289,6 @@ $carousel.on( 'scroll.flickity', function() {
 	  duration: 1000,
 	  delay: 100
 	});
-
 	setTimeout(function(){AOS.refresh()}, 300);
 
 
@@ -202,13 +296,15 @@ $carousel.on( 'scroll.flickity', function() {
 	var statusSearchView = true;
 
 
-	//menu init
-	$(".nav-menu").initMenu({
-		"menuToggleBtn": ".menu-toggle",
-		"subMenu": ".sub-menu-1",
-		"modalMenu": "#menuModal",
-		menuHoverIn: function(){}
-	})
+	//MENU INIT
+	try{
+		$(".nav-menu").initMenu({
+			"menuToggleBtn": ".menu-toggle",
+			"subMenu": ".sub-menu-1",
+			"modalMenu": "#menuModal",
+			menuHoverIn: function(){}
+		})
+	}catch(e){}
 
 
 function phoneDap(){
@@ -227,7 +323,7 @@ function dropbtn(){
 	});
 }
 dropbtn();
-
+$(".tp-rightarrow").click();
 
 
 
@@ -259,33 +355,25 @@ $(".btn-search").on("click", function(){
 		}, 300);
 	}
 
-} )
+})
 
-$(".tp-rightarrow").click()
+
 
 //RESIZE
-$( window ).on("resize", function(e){
-
-	// body
-
-});
-
+$( window ).on("resize", function(e){});
 //SCROLL
 $( window ).on("scroll", function(e){
+
+	$(window).scrollTop() > 300 && header_status == false ? 
+		header_status = true
+	: 
+	$(window).scrollTop() < 300 && header_status == true ?
+		header_status = false
+	: 
+		void(0);
 	
-	if($(window).scrollTop() > 300 && header_status == false){
-		
-		header_status = true; 
-
-	}else if($(window).scrollTop() < 300 && header_status == true){
-
-		header_status = false;
-
-	}
 
 });
-
-
 
 
 
@@ -311,6 +399,18 @@ function bannerImgToggle(){
 	banner.attr("style", bannerSlideBg_2);
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function Menu( menu, options ){

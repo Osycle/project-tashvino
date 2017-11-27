@@ -1233,7 +1233,8 @@ $header-height: 120px;
 .modal-dialog{
 
 	width: 70%;
-  margin: 50px 15% !important;
+  //margin: 50px 15% !important;
+  margin: 50px 15%;
 	.btn{
 
 		background-color: transparent;
@@ -2725,6 +2726,224 @@ main{
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+#page{
+	display: none;
+	&.in{
+		display: block;
+	}
+}
+
+
+//--------------- MODAL CHACKAGE
+
+.checkage{
+	background: white;
+	color: black;
+	.modal-dialog{
+    width: 30%;
+    top: 50%;
+    margin-top: -90px;
+    margin-left: auto;
+    margin-right: auto;
+	}
+	text-align: center;
+	h3{
+		color: black;
+		//text-indent: 15%;
+	}
+	.modal-content{
+		padding: 30px;
+		background: white;
+	}
+	.icon-bar{
+		width: 30px;
+  	height: 2px;
+	}
+	.btn-area{
+		margin: 30px 0 15px 0;
+		button{
+			@extend .btn-res;
+			margin: 15px 25px;
+		}
+		i{
+			font-size: 35px;
+		}
+	}
+	.agree-on{
+		color: green;
+	}
+	.agree-off{
+		color: red;
+	}
+	@media only screen and ( max-width:991px ){
+		.modal-dialog{
+	    width: 70%;
+	  }
+	}
+}
+
+
+
+
+
+
+
+
+//--------------ENTRY-PAGE
+$color_entry_1: #b68b55;
+$font_entry_1: "BebasNeueRegular";
+
+.color-entry-1{
+	color: #b68b55;
+}
+.entry-page::selection {
+    background: $color_entry_1;
+    color: #fff;
+    text-shadow: none;
+}
+.entry-page-header{
+	background-color: white;
+	border-bottom: 1px solid $color_gray_3;
+	.header-content{
+		//@include table-celling( 125px );
+	}
+	.contacts-content, .lang{
+		@include table-celling( 125px );
+		width: 1%;
+	}
+	a{
+	  color: inherit;
+	}
+	.lang{
+		
+		ul{
+
+		}
+		li{
+			margin: 0 10px;
+			font-weight: 500;
+			display: inline-block;
+			&.active{
+				color: $color_entry_1;
+			}
+		}
+	}
+	.contacts-content{
+		font-size: em(25, 16);
+		text-align: right;
+	}
+}
+.entry-page-content{
+	background: url(../img/entry-page/bg.jpg);
+	background-repeat: no-repeat;
+	min-height: 600px;
+	background-size: 90vw;
+	background-position: center center;
+	h2, h3, h4{
+		font-family: $font_entry_1;
+	}
+	p{
+		font-family: "Open Sans";
+
+	}
+	h3{
+		font-weight: 600;
+		font-size: em(28,16);
+	}
+	
+	
+  @media only screen and ( max-width:991px ){
+  	background-repeat: repeat-y;
+  }
+  @media only screen and ( min-width:992px ){
+		.col-md-1:first-child{
+			margin-left: -+((100/12)/2)+%;
+			img{ display: none;}
+		}
+  }
+}
+.entry-font-style{
+	font-family: $font_entry_1;
+}
+.entry-page-item{
+	text-align: center;
+	padding: 30px 5px;
+	&:hover{
+		a{
+			color: $color_entry_1;
+		}
+	}
+
+	a{
+		&:hover{
+			.img-production{
+				transform: scale(1.05);
+			}
+		}
+	}
+	p{
+		font-weight: 500;
+		//color: #333;
+		font-family: "Open Sans";
+	}
+	.img-production{
+		transition: all 0.3s ease-out;
+	}
+	.desc-content{
+		min-height: 165px;
+	}
+	.contacts-content{
+		position: relative;
+		bottom: 0;
+		font-weight: 300;
+		margin: 15px 0;
+		p{
+			color: darken(#d1d1d1, 20%);
+		}
+		font-size: em(15, 16);
+		.entry-font-style{
+
+			font-weight: 500;
+			font-size: em(28, 16);
+			margin: 15px 0;
+		}
+	}
+
+}
+
+
+	.border-content{
+    position: relative;
+		height: 600px;
+		text-align: center;
+		img{
+			top: 50%;
+    	position: relative;
+    	margin-top: -172.5px; 
+    }
+    @media only screen and ( max-width:991px ){
+    	height: fit-content;
+    }
+	}
+
+
+
+
+
+
+
+
+
 
 
 

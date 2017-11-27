@@ -402,6 +402,11 @@ template {
   font-style: normal; }
 
 @font-face {
+  font-family: 'BebasNeueRegular';
+  src: url("../fonts/BebasNeueRegular.eot");
+  src: url("../fonts/BebasNeueRegular.eot") format("embedded-opentype"), url("../fonts/BebasNeueRegular.woff2") format("woff2"), url("../fonts/BebasNeueRegular.woff") format("woff"), url("../fonts/BebasNeueRegular.ttf") format("truetype"), url("../fonts/BebasNeueRegular.svg#BebasNeueRegular") format("svg"); }
+
+@font-face {
   font-family: 'MonotypeCorsiva';
   src: url("../fonts/MonotypeCorsiva.eot");
   src: url("../fonts/MonotypeCorsiva.eot") format("embedded-opentype"), url("../fonts/MonotypeCorsiva.woff2") format("woff2"), url("../fonts/MonotypeCorsiva.woff") format("woff"), url("../fonts/MonotypeCorsiva.ttf") format("truetype"), url("../fonts/MonotypeCorsiva.svg#MonotypeCorsiva") format("svg"); }
@@ -19170,7 +19175,7 @@ button:hover, button:focus {
 .btn:focus, .btn:active {
   outline: none; }
 
-.btn-res, .btn-style, [class*="btn-blue"], [class*="btn-red"], .btn-opacity, .btn-blue, .btn-lnk, .btn-lnk-red, .nav-search .btn-search-sub, .nav-search .btn-search, .menu-toggle, .rewards-nav-toggle {
+.btn-res, .btn-style, [class*="btn-blue"], [class*="btn-red"], .btn-opacity, .btn-blue, .btn-lnk, .btn-lnk-red, .nav-search .btn-search-sub, .nav-search .btn-search, .menu-toggle, .rewards-nav-toggle, .checkage .btn-area button {
   background: transparent;
   border: 0;
   padding: 0; }
@@ -19848,7 +19853,7 @@ button:hover, button:focus {
 
 .modal-dialog {
   width: 70%;
-  margin: 50px 15% !important; }
+  margin: 50px 15%; }
   .modal-dialog .btn {
     background-color: transparent;
     position: relative;
@@ -20907,6 +20912,149 @@ main {
     .social img:hover {
       -webkit-filter: brightness(150%);
       filter: brightness(150%); }
+
+#page {
+  display: none; }
+  #page.in {
+    display: block; }
+
+.checkage {
+  background: white;
+  color: black;
+  text-align: center; }
+  .checkage .modal-dialog {
+    width: 30%;
+    top: 50%;
+    margin-top: -90px;
+    margin-left: auto;
+    margin-right: auto; }
+  .checkage h3 {
+    color: black; }
+  .checkage .modal-content {
+    padding: 30px;
+    background: white; }
+  .checkage .icon-bar {
+    width: 30px;
+    height: 2px; }
+  .checkage .btn-area {
+    margin: 30px 0 15px 0; }
+    .checkage .btn-area button {
+      margin: 15px 25px; }
+    .checkage .btn-area i {
+      font-size: 35px; }
+  .checkage .agree-on {
+    color: green; }
+  .checkage .agree-off {
+    color: red; }
+  @media only screen and (max-width: 991px) {
+    .checkage .modal-dialog {
+      width: 70%; } }
+
+.color-entry-1 {
+  color: #b68b55; }
+
+.entry-page::-moz-selection {
+  background: #b68b55;
+  color: #fff;
+  text-shadow: none; }
+
+.entry-page::selection {
+  background: #b68b55;
+  color: #fff;
+  text-shadow: none; }
+
+.entry-page-header {
+  background-color: white;
+  border-bottom: 1px solid #e6e6e6; }
+  .entry-page-header .contacts-content, .entry-page-header .lang {
+    display: table-cell;
+    height: 125px;
+    padding-left: 15px;
+    padding-right: 15px;
+    vertical-align: middle;
+    width: 1%; }
+  .entry-page-header a {
+    color: inherit; }
+  .entry-page-header .lang li {
+    margin: 0 10px;
+    font-weight: 500;
+    display: inline-block; }
+    .entry-page-header .lang li.active {
+      color: #b68b55; }
+  .entry-page-header .contacts-content {
+    font-size: 1.5625em;
+    text-align: right; }
+
+.entry-page-content {
+  background: url(../img/entry-page/bg.jpg);
+  background-repeat: no-repeat;
+  min-height: 600px;
+  -webkit-background-size: 90vw 90vw;
+  background-size: 90vw;
+  background-position: center center; }
+  .entry-page-content h2, .entry-page-content h3, .entry-page-content h4 {
+    font-family: "BebasNeueRegular"; }
+  .entry-page-content p {
+    font-family: "Open Sans"; }
+  .entry-page-content h3 {
+    font-weight: 600;
+    font-size: 1.75em; }
+  @media only screen and (max-width: 991px) {
+    .entry-page-content {
+      background-repeat: repeat-y; } }
+  @media only screen and (min-width: 992px) {
+    .entry-page-content .col-md-1:first-child {
+      margin-left: -4.16667%; }
+      .entry-page-content .col-md-1:first-child img {
+        display: none; } }
+
+.entry-font-style {
+  font-family: "BebasNeueRegular"; }
+
+.entry-page-item {
+  text-align: center;
+  padding: 30px 5px; }
+  .entry-page-item:hover a {
+    color: #b68b55; }
+  .entry-page-item a:hover .img-production {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05); }
+  .entry-page-item p {
+    font-weight: 500;
+    font-family: "Open Sans"; }
+  .entry-page-item .img-production {
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
+  .entry-page-item .desc-content {
+    min-height: 165px; }
+  .entry-page-item .contacts-content {
+    position: relative;
+    bottom: 0;
+    font-weight: 300;
+    margin: 15px 0;
+    font-size: 0.9375em; }
+    .entry-page-item .contacts-content p {
+      color: #9e9e9e; }
+    .entry-page-item .contacts-content .entry-font-style {
+      font-weight: 500;
+      font-size: 1.75em;
+      margin: 15px 0; }
+
+.border-content {
+  position: relative;
+  height: 600px;
+  text-align: center; }
+  .border-content img {
+    top: 50%;
+    position: relative;
+    margin-top: -172.5px; }
+  @media only screen and (max-width: 991px) {
+    .border-content {
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content; } }
 
 /*
 										 --- OTHER ---
