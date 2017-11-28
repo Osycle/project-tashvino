@@ -792,6 +792,7 @@ $header-height: 120px;
 	
 }
 
+
 .slogan-2{
 	color: inherit	;
 	font-size: em(24, 16);
@@ -2737,53 +2738,79 @@ main{
 
 
 #page{
-	display: none;
+	//display: none;
 	&.in{
 		display: block;
 	}
 }
 
-
 //--------------- MODAL CHACKAGE
 
 .checkage{
-	background: white;
-	color: black;
+	//background: rgba(black, 0.5);
+	color: white;
+	//position: relative;
+	z-index: 100000;
+	text-align: center;
+	.modal-logo{
+		//width: 10%;
+		animation: flipLogo 10s linear infinite;
+		img{
+			filter: drop-shadow(0 0 10px #fcdbee);
+			width: 200px;
+		}
+	}
 	.modal-dialog{
     width: 30%;
     top: 50%;
-    margin-top: -90px;
+    margin-top: -200px;
     margin-left: auto;
     margin-right: auto;
 	}
-	text-align: center;
+	h4{
+		margin: 20px 0;
+		font-family: MonotypeCorsiva;
+    text-transform: none;
+    font-size: 1.6em;
+	}
 	h3{
-		color: black;
+		margin: 20px 0;
+		font-family: MonotypeCorsiva;
+		font-size: 2em;
+		color: white;
 		//text-indent: 15%;
 	}
 	.modal-content{
 		padding: 30px;
-		background: white;
+		background: rgba(black, 0.5);
+		//background: white;
 	}
 	.icon-bar{
 		width: 30px;
   	height: 2px;
 	}
 	.btn-area{
-		margin: 30px 0 15px 0;
+		margin: 15px 0 15px 0;
 		button{
 			@extend .btn-res;
-			margin: 15px 25px;
+			margin: 0 25px;
+			&:hover{
+				i{
+					text-shadow: 0 0 25px white;
+				}
+			}
 		}
 		i{
+			transition: all 0.1s ease-out;
+			text-shadow: 0 0 0 white;
 			font-size: 35px;
 		}
 	}
 	.agree-on{
-		color: green;
+		color: white;
 	}
 	.agree-off{
-		color: red;
+		color: white;
 	}
 	@media only screen and ( max-width:991px ){
 		.modal-dialog{
@@ -2806,6 +2833,7 @@ $font_entry_1: "BebasNeueRegular";
 .color-entry-1{
 	color: #b68b55;
 }
+
 .entry-page::selection {
     background: $color_entry_1;
     color: #fff;
@@ -2815,11 +2843,18 @@ $font_entry_1: "BebasNeueRegular";
 	background-color: white;
 	border-bottom: 1px solid $color_gray_3;
 	.header-content{
-		//@include table-celling( 125px );
+	
 	}
-	.contacts-content, .lang{
+	.contacts-content, .lang, .entry-slogan{
 		@include table-celling( 125px );
-		width: 1%;
+		width: 0.1%;
+	}
+	.entry-slogan{
+		text-align: center;
+		color: black;
+		font-size: em(44, 16);
+		font-family: $font-family-3;
+		width: 0.2%;
 	}
 	a{
 	  color: inherit;
@@ -2841,6 +2876,21 @@ $font_entry_1: "BebasNeueRegular";
 	.contacts-content{
 		font-size: em(25, 16);
 		text-align: right;
+	}
+
+
+	 @media only screen and ( max-width:991px ){
+  	background-repeat: repeat-y;
+		.contacts-content, .lang, .entry-slogan{
+			@include table-celling( 60px );
+		}
+  }
+}
+@media only screen and ( max-width:991px ){
+	.entry{
+		.header-hidden{
+			height: 60px !important;
+		}
 	}
 }
 .entry-page-content{
@@ -2864,6 +2914,7 @@ $font_entry_1: "BebasNeueRegular";
 	
   @media only screen and ( max-width:991px ){
   	background-repeat: repeat-y;
+  	margin: 0;
   }
   @media only screen and ( min-width:992px ){
 		.col-md-1:first-child{
@@ -2900,7 +2951,10 @@ $font_entry_1: "BebasNeueRegular";
 		transition: all 0.3s ease-out;
 	}
 	.desc-content{
-		min-height: 165px;
+		min-height: 210px;
+	}
+	.img-content:not(.img-production){
+		height: 90px;
 	}
 	.contacts-content{
 		position: relative;
@@ -2919,6 +2973,13 @@ $font_entry_1: "BebasNeueRegular";
 		}
 	}
 
+	@media only screen and ( max-width:991px ){
+		padding: 30px 12vw;
+		.desc-content{
+			min-height: auto;
+		}
+	}
+
 }
 
 
@@ -2932,7 +2993,17 @@ $font_entry_1: "BebasNeueRegular";
     	margin-top: -172.5px; 
     }
     @media only screen and ( max-width:991px ){
-    	height: fit-content;
+    	height: 150px;
+    	&:first-child{
+    		display: none;
+    	}
+	    img{
+	    	width: 10%;
+				top: 50%;
+	    	position: relative;
+	    	margin-top: -23%; 
+	    	transform: rotate(270deg);
+	    }
     }
 	}
 

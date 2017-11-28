@@ -1701,6 +1701,58 @@
 
 
 
+
+
+
+
+
+@keyframes flipLogo {
+  from {
+    filter: drop-shadow(0 0 3px #fcdbee);
+    transform: perspective(1500px) rotate3d(0, 1, 0, -360deg);
+    animation-timing-function: ease-out;
+  }
+
+  8% {
+    transform: perspective(1500px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    animation-timing-function: ease-out;
+  }
+
+  10% {
+    transform: perspective(1500px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    animation-timing-function: ease-in;
+  }
+
+  15% {
+    transform: perspective(1500px) scale3d(.95, .95, .95);
+    animation-timing-function: ease-in;
+  }
+  50%{
+    filter: drop-shadow(0 0 5px #1b2b54);
+  }
+
+  to {
+    filter: drop-shadow(0 0 3px #fcdbee);
+    transform: perspective(1500px);
+    animation-timing-function: ease-in;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 
 @keyframes vine{
   from {
@@ -1728,6 +1780,20 @@
 .a-scale.active {
   animation: a-scale 0.5s ease-in-out;
 }
+@keyframes leftDes{
+  from {
+    opacity: 0;
+    //margin-left: -100%;
+  }
+  to {
+    opacity: 1;
+    //margin-left: 0;
+  }
+}
+.leftDes {
+  animation: leftDes 0.3s ease-in-out;
+}
+
 @keyframes leftDes{
   from {
     opacity: 0;
