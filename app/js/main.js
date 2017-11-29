@@ -54,7 +54,7 @@ var $carousel = $('.gallery-content.carousel').flickity({
   imagesLoaded: true,
   percentPosition: false
 });
-/*var $imgs = $carousel.find('.gallery-item.carousel-cell img');
+var $imgs = $carousel.find('.gallery-item.carousel-cell img');
 // get transform property
 var docStyle = document.documentElement.style;
 var transformProp = typeof docStyle.transform == 'string' ?
@@ -68,7 +68,7 @@ $carousel.on( 'scroll.flickity', function() {
     var x = ( slide.target + flkty.x ) * -1/3;
     img.style[ transformProp ] = 'translateX(' + x  + 'px)';
   });
-});*/
+});
 
 
 	$('.product-carousel-main').flickity({
@@ -119,18 +119,22 @@ $carousel.on( 'scroll.flickity', function() {
 
 
   // PRODUCTION FILTER
-  var productionContent = $( $(".production-content") );
-  var productionHeader =  $( $("#production-header") );
-  var productionCatName = [
-  	"cat-vinomaterial",
-  	"cat-konyachniy",
-  	"cat-vodka",
-  	"cat-konyak",
-  	"cat-vino"
-  ]
- 	var oldMixActive = {};
- 	var mixActive = {};
-  if( productionContent.length != 0 && productionHeader.length != 0)
+
+ 
+  var productionContent = 		$( $(".production-content") ),
+  		productionHeader =  		$( $("#production-header") ),
+  		productionNav =  				$( $("#production-nav") ),
+  		productionCatName = [
+		  	"cat-vinomaterial",
+		  	"cat-konyachniy",
+		  	"cat-vodka",
+		  	"cat-konyak",
+		  	"cat-vino"
+		  ],
+ 			oldMixActive = {},
+ 			mixActive = {};
+
+  if( productionContent.length && productionHeader.length)
   	var productionFilter = mixitup( productionContent, {
 	  	  load: {
 	        filter: "."+productionContent.attr("data-active")
@@ -147,12 +151,14 @@ $carousel.on( 'scroll.flickity', function() {
 						   	oldMixActive = mixActive;
 
 						    mixAppenHeader( headerText );
-
+		
 						  }
 		    }
   	} );
 
+
   (function(){
+
   	var mixStartActive = $( $("[data-filter='."+productionContent.attr("data-active")+"']") );
   	oldMixActive = mixStartActive;
 		var text = mixStartActive
@@ -164,7 +170,17 @@ $carousel.on( 'scroll.flickity', function() {
 											.trim() || false;
 
 		mixAppenHeader( text );
+
+		productionNav.find( "[data-filter]" ).on("click", function ( e ){
+	 		var imageSrc = $( this ).attr( "data-banner" );
+
+	 			bannerImgToggle( imageSrc );
+
+	 	} )
+
   })();
+
+
 
   function mixAppenHeader( text ){
 
@@ -185,6 +201,16 @@ $carousel.on( 'scroll.flickity', function() {
    	}
   }
   productionCnt( productionCatName );
+
+
+
+
+
+ !productionNav.length ? 
+
+		bannerImgToggle()
+	:
+		bannerImgToggle( productionNav.find(".in [data-banner]").attr("data-banner") )
 
 
 
@@ -219,14 +245,6 @@ $carousel.on( 'scroll.flickity', function() {
   });
 	
 
-
-	
-
-
-
-
-
-
 	// CHECKAGE
 	var checkage = {
 				status: false
@@ -251,7 +269,6 @@ $carousel.on( 'scroll.flickity', function() {
 	function checkageOn () {
 		checkageModal.modal().off("click");
 	}
-	//console.log ( checkageModal.attr("data-status") != "off" );
 	if ( checkageModal && checkageModal.attr("data-status")  != "off" ){
 
 		sessionStorage.checkage ?
@@ -377,9 +394,6 @@ $( window ).on("scroll", function(e){
 
 
 
-setInterval( function(){
-	bannerImgToggle();
-}, 6000 );
 
 
 
@@ -388,15 +402,35 @@ setInterval( function(){
 
 
 
-var bannerBg = 1;
-function bannerImgToggle(){
-	var banner = $( $("#banner") ) ;
+var bannerBg = {
+	"status": false,
+	"bg_1" : "",
+	"bg_2" : ""
+}
 
-	window.bannerSlideBg_1 = banner.attr('style');
-	window.bannerSlideBg_2 = banner.attr('data-toggle-img');
+function bannerImgToggle( imageSrc ){
 
-	banner.attr("data-toggle-img", bannerSlideBg_1);
-	banner.attr("style", bannerSlideBg_2);
+	window.banner = $( $("#banner") ) ;
+
+
+	imageSrc || null ? 
+
+		banner
+					.attr("style", "background-image: url('"+imageSrc+"')" )
+					.css("transition", "all 0.5s ease-out")
+
+	:
+		setInterval( function(){
+
+			bannerBg.bg_1 = banner.attr("style");
+			bannerBg.bg_2 = banner.attr("data-toggle-img");
+
+		banner
+					.attr("style", bannerBg.bg_2 )
+					.attr("data-toggle-img", bannerBg.bg_1 )
+
+	}, 5000 );
+
 
 }
 
@@ -493,15 +527,8 @@ function Menu( menu, options ){
 	});
 	
 
-	//	FUNCITON
 
-	function adposmenu(subMenu){
-		//Адаптация положение подменю в зависимости от размера экрана
-		var el = $(subMenu).find("li ul");
-		if (el.length === 0) return;
-		if ( $( window ).width() < el.width() + el.offset().left ) 
-			el.addClass("left");
-	}
+
 
 }
 
@@ -512,19 +539,19 @@ function Menu( menu, options ){
 window.$.fn.initMenu = function(option){
 
 	var options = $.extend({
-		"menuToggleBtn"					: false, 		// Кнопка бара
-		"subMenu"								: false, 		// Класс подменю
-		"modalMenu"							: false, 		// Модальное меню
+		"menuToggleBtn"					: false, 		
+		"subMenu"								: false, 		
+		"modalMenu"							: false, 		
 
-		"menuToggle"						: Function, 	// Переключение
+		"menuToggle"						: Function, 	
 		"menuHoverIn"						: Function,
 		"menuHoverOut"					: Function,
 		"subHoverIn"						: Function,
 		"subHoverOut"						: Function,
-		"modalMenuShow"					: Function, 	// Открытие меню
-		"modalMenuShown"				: Function,		// Меню раскрыт
-		"modalMenuHide"					: Function, 	// Раскрытие Меню
-		"modalMenuHidden"				: Function 		// Меню скрыт
+		"modalMenuShow"					: Function, 
+		"modalMenuShown"				: Function,	
+		"modalMenuHide"					: Function, 
+		"modalMenuHidden"				: Function 	
 
 
 	}, option );
@@ -533,6 +560,9 @@ window.$.fn.initMenu = function(option){
 	return menu;
 
 }
+
+
+
 
 
 

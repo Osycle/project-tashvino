@@ -416,6 +416,46 @@ template {
   src: url("../fonts/EseninscriptTwo.eot");
   src: url("../fonts/EseninscriptTwo.eot") format("embedded-opentype"), url("../fonts/EseninscriptTwo.woff2") format("woff2"), url("../fonts/EseninscriptTwo.woff") format("woff"), url("../fonts/EseninscriptTwo.ttf") format("truetype"), url("../fonts/EseninscriptTwo.svg#EseninscriptTwo") format("svg"); }
 
+/* istok-web-regular - latin */
+@font-face {
+  font-family: 'Istok Web';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/istok-web-v11-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Istok Web Regular"), local("IstokWeb-Regular"), url("../fonts/istok-web-v11-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/istok-web-v11-latin-regular.woff2") format("woff2"), url("../fonts/istok-web-v11-latin-regular.woff") format("woff"), url("../fonts/istok-web-v11-latin-regular.ttf") format("truetype"), url("../fonts/istok-web-v11-latin-regular.svg#IstokWeb") format("svg");
+  /* Legacy iOS */ }
+
+/* istok-web-italic - latin */
+@font-face {
+  font-family: 'Istok Web';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/istok-web-v11-latin-italic.eot");
+  /* IE9 Compat Modes */
+  src: local("Istok Web Italic"), local("IstokWeb-Italic"), url("../fonts/istok-web-v11-latin-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/istok-web-v11-latin-italic.woff2") format("woff2"), url("../fonts/istok-web-v11-latin-italic.woff") format("woff"), url("../fonts/istok-web-v11-latin-italic.ttf") format("truetype"), url("../fonts/istok-web-v11-latin-italic.svg#IstokWeb") format("svg");
+  /* Legacy iOS */ }
+
+/* istok-web-700 - latin */
+@font-face {
+  font-family: 'Istok Web';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/istok-web-v11-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local("Istok Web Bold"), local("IstokWeb-Bold"), url("../fonts/istok-web-v11-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/istok-web-v11-latin-700.woff2") format("woff2"), url("../fonts/istok-web-v11-latin-700.woff") format("woff"), url("../fonts/istok-web-v11-latin-700.ttf") format("truetype"), url("../fonts/istok-web-v11-latin-700.svg#IstokWeb") format("svg");
+  /* Legacy iOS */ }
+
+/* istok-web-700italic - latin */
+@font-face {
+  font-family: 'Istok Web';
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/istok-web-v11-latin-700italic.eot");
+  /* IE9 Compat Modes */
+  src: local("Istok Web Bold Italic"), local("IstokWeb-BoldItalic"), url("../fonts/istok-web-v11-latin-700italic.eot?#iefix") format("embedded-opentype"), url("../fonts/istok-web-v11-latin-700italic.woff2") format("woff2"), url("../fonts/istok-web-v11-latin-700italic.woff") format("woff"), url("../fonts/istok-web-v11-latin-700italic.ttf") format("truetype"), url("../fonts/istok-web-v11-latin-700italic.svg#IstokWeb") format("svg");
+  /* Legacy iOS */ }
+
 /* open-sans-300 - latin_cyrillic */
 @font-face {
   font-family: 'Open Sans';
@@ -19106,7 +19146,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-text-size-adjust: none;
   text-size-adjust: none;
-  font: 14px "Open Sans";
+  font: 14px "Istok Web", sans-serif;
   color: #333;
   background-color: #f8f8f8; }
 
@@ -19142,7 +19182,7 @@ img {
   outline: 0; }
 
 h1, h2, h3, h4, h5 {
-  font-family: "Open Sans";
+  font-family: "Istok Web", sans-serif;
   color: inherit;
   line-height: 160%; }
 
@@ -19349,7 +19389,6 @@ button:hover, button:focus {
     filter: brightness(125%); }
   .btn-blue-1 a, .btn-blue-1 .clc {
     text-transform: uppercase;
-    color: #1b2b54;
     z-index: 1; }
 
 [class*="btn-blue"], [class*="btn-red"], .btn-opacity {
@@ -19423,8 +19462,8 @@ button:hover, button:focus {
   margin-right: 2%; }
 
 .inlineble-3 figure {
-  width: 23.33333%;
-  margin-right: 3%; }
+  width: 31%;
+  margin-right: 1.5%; }
 
 .inlineble-4 figure {
   width: 20%;
@@ -19464,6 +19503,9 @@ button:hover, button:focus {
     margin-right: 0; }
   .inlineble-2 figure {
     text-align: center; }
+  .inlineble-3 figure {
+    width: 100%;
+    margin-right: 0%; }
   .rewards .inlineble-4 figure {
     width: 60%;
     margin-right: 3%; }
@@ -19519,7 +19561,7 @@ button:hover, button:focus {
 
 .skin-header-footer {
   border-top: 5px solid white;
-  background-color: #eaf4de; }
+  background-color: white; }
 
 .header-navbar, .menu-toggle {
   display: table-cell;
@@ -19565,7 +19607,12 @@ button:hover, button:focus {
 .nav-feedback {
   float: right; }
   .nav-feedback button {
+    background-color: transparent;
     margin-top: 5px; }
+    .nav-feedback button * {
+      font-size: 0.875em;
+      font-weight: 400;
+      color: white; }
 
 .slogan-1 {
   display: inline-block;
@@ -19583,12 +19630,12 @@ button:hover, button:focus {
   display: inline-block;
   z-index: 5;
   float: right;
-  background-color: white;
-  border: 1px solid #e6e6e6;
+  background-color: transparent;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   width: 50px;
   text-align: left;
+  color: white;
   margin-top: 12.5px;
   margin-left: 30px; }
   .dropdown-lang span {
@@ -19604,9 +19651,9 @@ button:hover, button:focus {
     font-size: 0.875em;
     font-weight: 600; }
   .dropdown-lang i {
-    color: rgba(27, 43, 84, 0.8);
     vertical-align: middle;
     display: inline-block;
+    margin-left: 5px;
     font-size: 1.25em; }
   .dropdown-lang .dropbtn {
     outline: none;
@@ -19744,7 +19791,7 @@ button:hover, button:focus {
       position: relative;
       display: inline-block; }
       .nav-menu:not(.min) .menu-list > li > a, .nav-menu:not(.min) .footer-menu > li > a {
-        font-family: "Open Sans";
+        font-family: "Istok Web", sans-serif;
         font-weight: 600;
         padding: 5px 0px;
         margin: 10px 10px; }
@@ -19787,7 +19834,7 @@ button:hover, button:focus {
     width: max-content;
     visibility: hidden;
     opacity: 0;
-    background-color: #eaf4de; }
+    background-color: white; }
     .nav-menu:not(.min) [class*="sub-menu"] i {
       -webkit-transition: all 0.2s ease-in;
       -o-transition: all 0.2s ease-in;
@@ -20371,6 +20418,9 @@ main {
         padding: 0;
         margin: 0; } }
 
+.inx-gallery {
+  background-color: #f1f1f1; }
+
 .short-gallery {
   display: table-cell;
   height: 425px;
@@ -20556,9 +20606,17 @@ main {
     overflow: hidden;
     -webkit-transition: all 0.5s linear;
     -o-transition: all 0.5s linear;
-    transition: all 0.5s linear;
-    border: 1px solid rgba(27, 43, 84, 0.1);
-    margin-right: 1%; }
+    transition: all 0.5s linear; }
+    .production-content figure .img-content {
+      border: 1px solid rgba(27, 43, 84, 0.1);
+      width: 100%; }
+      .production-content figure .img-content img {
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        max-width: initial;
+        padding: 20px 10px;
+        width: 100%; }
     .production-content figure:hover .skin-product {
       opacity: 1;
       -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
@@ -20582,15 +20640,6 @@ main {
       display: block;
       z-index: 10;
       position: relative; }
-    .production-content figure .img-content {
-      width: 100%; }
-      .production-content figure .img-content img {
-        -webkit-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        width: 190px;
-        max-width: initial;
-        padding: 20px 0; }
     .production-content figure .skin-product, .production-content figure .skin-product-hidden {
       top: 0;
       position: absolute;
@@ -20644,6 +20693,12 @@ main {
       -webkit-transform: scale(3);
       -ms-transform: scale(3);
       transform: scale(3); }
+  .production-content .desc-content {
+    padding: 0 2.5vh; }
+    .production-content .desc-content * {
+      text-align: center; }
+    .production-content .desc-content p {
+      font-size: 1em; }
 
 /* #production-nav{
 

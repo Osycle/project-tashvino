@@ -397,8 +397,8 @@
 
 
 		<!-- BANNER -->
-		<div id="banner" class="row" style="background-image: url('img/slider/slide-2.jpg');" 
-																 data-toggle-img="background-image: url('img/slider/slide-3.jpg');" >
+		<div id="banner" class="row" style="background-image: url('img/banner/banner-stand-1.jpg');" 
+																 data-toggle-img="background-image: url('img/banner/banner-stand-2.jpg');" >
 
 			<div class="banner-shadow wow fadeIn" data-wow-dalay="0.6s">
 			</div>
@@ -442,13 +442,15 @@
 		<div class="row production m-v-60 p-b-15 bg-color-white">
 			<div class="container">
 
-
+			<script>
+				document.getElementById( "banner" ).style = "";
+			</script>
 				<div id="production-header">
 					<h1>Водки</h1>
 				</div>
 		    <div id="production-nav" class="col-md-3 production-nav">
 		    	<h1>Каталог</h1>
-		    	<!-- 	ACCORDION	 -->
+		    	
 					<div class="panel-group" id="production-accordion" class="accordion" aria-multiselectable="true">
 
 
@@ -457,7 +459,7 @@
 					 <div class="panel panel-default" id="cat-vodka">
 					    <div class="panel-heading" role="tab">
 					      <h4 class="panel-title">
-					        <a role="button" data-filter=".cat-vodka" data-sort="default:random">
+					        <a role="button" data-filter=".cat-vodka" data-banner="img/banner/banner-vodka.jpg" data-sort="default:random">
 					          Водка
 					        </a>
 					        <i class="fa fa-angle"></i>
@@ -477,7 +479,7 @@
 					  <div class="panel panel-default" id="cat-konyak">
 					    <div class="panel-heading" role="tab">
 					      <h4 class="panel-title">
-					        <a role="button" data-filter=".cat-konyak" data-sort="default:random">
+					        <a role="button" data-filter=".cat-konyak" data-banner="img/banner/banner-konyak.jpg" data-sort="default:random">
 					          Коньяк
 					        </a>
 					        <i class="fa fa-angle"></i>
@@ -497,7 +499,7 @@
 					  <div class="panel panel-default" id="cat-vino">
 					    <div class="panel-heading" role="tab">
 					      <h4 class="panel-title">
-					        <a role="button" data-filter=".cat-vino" data-sort="default:random">
+					        <a role="button" data-filter=".cat-vino" data-banner="img/banner/banner-vino.jpg" data-sort="default:random">
 					          Вино
 					        </a>
 					        <i class="fa fa-angle"></i>
@@ -559,8 +561,8 @@
 
 
 
-		    <!-- Параметр активности data-activ="cat-konyak" -->
-		    <div class="col-md-9 production-content inlineble-3 figure-m-v-10" data-active="cat-vinomaterial">
+		    <!-- Параметр активности data-active="cat-konyak" -->
+		    <div class="col-md-9 production-content inlineble-3 figure-m-v-10" data-active="cat-vino">
 
 
 
@@ -677,9 +679,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Водка/Абрикосовая.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Абрикосовая</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Абрикосовая</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						  
 						  <figure class="mix cat-vodka production-item">
@@ -687,9 +693,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Водка/Айвовая.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Айвовая</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Айвовая</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						  
 						  <figure class="mix cat-vodka production-item">
@@ -697,9 +707,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Водка/Айс Даймонд.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Айс Даймонд</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Айс Даймонд</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						  
 						  <figure class="mix cat-vodka production-item">
@@ -707,9 +721,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Водка/Белое добро.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Белое добро</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Белое добро</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						  
 						  <figure class="mix cat-vodka production-item">
@@ -717,9 +735,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Водка/Белый мед.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Белый мед</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Белый мед</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						  
 						  <figure class="mix cat-vodka production-item">
@@ -727,9 +749,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Водка/Грэйп.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Грэйп</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Грэйп</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 
 						   
@@ -738,9 +764,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Водка/Индиго.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Индиго</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Индиго</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 
 						   
@@ -749,9 +779,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Водка/Грэйп.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Грэйп</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Грэйп</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 
 						   
@@ -760,9 +794,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Водка/Кобальт.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Кобальт</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Кобальт</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 
 						   
@@ -771,9 +809,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Водка/Кора байир.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Кора байир</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Кора байир</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 
 						   
@@ -782,9 +824,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Водка/Любимица.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Любимица</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Любимица</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 
 						   
@@ -793,9 +839,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Водка/Грэйп.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Грэйп</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Грэйп</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						   
 						  <figure class="mix cat-vodka production-item">
@@ -803,9 +853,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Водка/Народный стиль.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Народный стиль</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Народный стиль</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						   
 						  <figure class="mix cat-vodka production-item">
@@ -813,9 +867,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Водка/Нежная.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Нежная</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Нежная</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						   
 						  <figure class="mix cat-vodka production-item">
@@ -823,9 +881,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Водка/Ок чой 500.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Ок чой 500</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Ок чой 500</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						   
 						  <figure class="mix cat-vodka production-item">
@@ -833,9 +895,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Водка/Ок чой 700.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Ок чой 700</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Ок чой 700</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 
 
@@ -861,9 +927,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Коньяк/Белый ястреб.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Белый ястреб</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Белый ястреб</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						  
 						  <figure class="mix cat-konyak production-item">
@@ -871,9 +941,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Коньяк/Золотой Аист.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Золотой Аист</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Золотой Аист</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						  
 						  <figure class="mix cat-konyak production-item">
@@ -881,9 +955,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Коньяк/коньяк Узбекистан 25 лет.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>коньяк Узбекистан 25 лет</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>коньяк Узбекистан 25 лет</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						  
 						  <figure class="mix cat-konyak production-item">
@@ -891,9 +969,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Коньяк/Легенда востока.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Легенда востока</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Легенда востока</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						  
 						  <figure class="mix cat-konyak production-item">
@@ -901,9 +983,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Коньяк/Олд барон.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Олд барон</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Олд барон</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						  
 						  <figure class="mix cat-konyak production-item">
@@ -911,9 +997,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Коньяк/плоский Ташкент ХО.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>плоский Ташкент ХО</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>плоский Ташкент ХО</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 
 
@@ -922,9 +1012,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Коньяк/Ташкент ХО.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Ташкент ХО</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Ташкент ХО</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 
 						  <figure class="mix cat-konyak production-item">
@@ -932,9 +1026,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Коньяк/Узбекистан ординарный.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Узбекистан ординарный</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Узбекистан ординарный</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						  
 
@@ -959,9 +1057,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Вино/Баян ширей.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Баян ширей</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Баян ширей</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						  
 						  <figure class="mix cat-vino production-item">
@@ -969,9 +1071,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Вино/Бухара вино.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Бухара вино</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Бухара вино</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						  
 						  <figure class="mix cat-vino production-item">
@@ -979,9 +1085,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Вино/Кагоры.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Кагоры</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Кагоры</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						  
 						  <figure class="mix cat-vino production-item">
@@ -989,9 +1099,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Вино/Лейли и меджнун.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Лейли и меджнун</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Лейли и меджнун</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						  
 						  <figure class="mix cat-vino production-item">
@@ -999,9 +1113,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Вино/Ркацители.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Ркацители</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Ркацители</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						  
 						  <figure class="mix cat-vino production-item">
@@ -1009,9 +1127,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Вино/Самарканд вино.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Самарканд вино</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Самарканд вино</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						  
 						  <figure class="mix cat-vino production-item">
@@ -1019,9 +1141,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Вино/Саперави.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Саперави</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Саперави</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						  
 						  <figure class="mix cat-vino production-item">
@@ -1029,9 +1155,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Вино/Семь Красавиц.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Семь Красавиц</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Семь Красавиц</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 						  
 						  <figure class="mix cat-vino production-item">
@@ -1039,9 +1169,13 @@
 						  		<div class="img-content">
 						  			<img src="img/production/Вино/Ташкент вино.jpg"/>
 						  		</div>
-						  		<div class="skin-product"><span>Ташкент вино</span></div>
+						  		<div class="skin-product"><span>Подробнее</span></div>
 						  		<div class="skin-product-hidden"></div>
 						  	</a>
+					  		<div class="desc-content">
+					  			<h4>Ташкент вино</h4>
+					  			<p>Тестовое описание товара в 2 строчки</p>
+					  		</div>
 						  </figure>
 
 
