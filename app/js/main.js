@@ -381,11 +381,10 @@ $( window ).on("resize", function(e){});
 //SCROLL
 $( window ).on("scroll", function(e){
 
-	$(window).scrollTop() > 300 && header_status == false ? 
-		header_status = true
+	$(window).scrollTop() > 300 && header_status == false ? header_status = true
 	: 
-	$(window).scrollTop() < 300 && header_status == true ?
-		header_status = false
+		void(0);
+	$(window).scrollTop() < 300 && header_status == true ? header_status = false
 	: 
 		void(0);
 	
@@ -452,7 +451,7 @@ function Menu( menu, options ){
 	var self = this;
 	menu = $( menu );
 
-	//ПОЛЯ
+	
 	this.menuClass						= menu[0].className;
 	this.menuToggleBtn 				= $( $(options.menuToggleBtn) ) ;
 	this.menuToggleBtnParent  = $(this.menuToggleBtn).parent();
@@ -460,7 +459,7 @@ function Menu( menu, options ){
 	this.modalMenu  					= $( $(options.modalMenu) );
 	this.modalMenuStatus 		 	= false; 
 
-	//МЕТОДЫ
+	
 	this.menuToggle					= function(){
 		$( this.menuToggleBtn ).trigger("click");
 		return this.modalMenuStatus = !this.modalMenuStatus;
@@ -507,7 +506,6 @@ function Menu( menu, options ){
 	//HOVER SUB-MENU
 	this.subMenu.hover(
 		function(){
-			adposmenu(this);
 			options.subHoverIn();
 		},
 		function(){

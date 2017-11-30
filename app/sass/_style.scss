@@ -761,12 +761,12 @@ $header-height: 120px;
 	width: 5%;
 }
 .logo {
-
+	text-align: center;
   float: left;
   padding: 25px 0;
   transition: all 0.3s ease-in-out;
   img{
-		width: 138px;
+		width: 125px;
 	}
 	&:hover, &:focus{
   	//transform: scale(1);
@@ -2116,7 +2116,7 @@ main{
 		//margin-right: 1%;
 
 		.img-content{
-			border: 1px solid rgba($color_1, 0.1);
+			//border: 1px solid rgba($color_1, 0.1);
 			width: 100%;
 			//width: 230px;
 			img{
@@ -2928,7 +2928,7 @@ $font_entry_1: "BebasNeueRegular";
 	}
 }
 .entry-page-content{
-	background: url(../img/entry-page/bg.jpg);
+	//background: url(../img/entry-page/bg.jpg);
 	background-repeat: no-repeat;
 	min-height: 600px;
 	background-size: 90vw;
