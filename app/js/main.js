@@ -48,11 +48,11 @@ var $carousel = $('.gallery-content.carousel').flickity({
 		initialIndex: 2,
 		draggable: !(checkView(992)) ,
 		friction: 0.5,
+		wrapAround: true,
 		contain: true,
 		cellAlign: 'center',
-
-  imagesLoaded: true,
-  percentPosition: false
+	  imagesLoaded: true,
+	  percentPosition: false
 });
 var $imgs = $carousel.find('.gallery-item.carousel-cell img');
 // get transform property
