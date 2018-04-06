@@ -137,8 +137,10 @@ $carousel.on( 'scroll.flickity', function() {
   if( productionContent.length && productionHeader.length)
   	var productionFilter = mixitup( productionContent, {
 	  	  load: {
-	        filter: "."+productionContent.attr("data-active")
+	        filter: "."+productionContent.attr("data-active"),
+	        sort: 'published-date:desc'
 	    	},
+
 	    	 callbacks: {
 		        onMixStart: function(state, futureState) {
 
